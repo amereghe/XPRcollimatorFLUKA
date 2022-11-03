@@ -1,0 +1,159 @@
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+TITLE
+XPR Collimators
+*
+* define vars
+* - collimator material and geometry:
+* #define Wcolli: tungsten, 25mm of length;
+* #define Cucolli: copper, 50mm of length;
+* #define Nicolli: nichel, 50mm of length;
+* - half gap [cm]
+* #define hgap 0.1
+*
+* physics settings for RP studies
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+DEFAULTS                                                              PRECISIO
+* Transport of heavy ions with nuclear interactions
+IONTRANS        -2.0
+* Heavy fragments evaporation
+PHYSICS          3.0                                                  EVAPORAT
+* Coalescence actvivated
+PHYSICS          1.0                                                  COALESCE
+* Activate radioactive decays
+RADDECAY         1.0                 3.0                                      
+* Irradiation profile:
+* - 16h --> 57.6E3 s;
+* - 8E8 C&s 
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+IRRPROFI      57.6E3       8E8
+* Define cooling times
+*               2min      5min     10min     30min     60min
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+DCYTIMES        120.      300.      600.     1800.     3600.
+*
+* physics settings from FM
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+GLOBAL         9999.
+* DEFAULTS                                                              HADROTHE
+* PHYSICS           2.                                                  EVAPORAT
+FLUKAFIX       0.005                      BLCKHOLE  @LASTMAT
+DELTARAY         -1.                      BLCKHOLE  @LASTMAT
+*
+* beam properties
+* RRossi:
+* - spatial: rect delta X,Y=1cm;
+* - angular: Gaussian, sigma_X,Y=1mrad;
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+BEAM          -0.400           -2.35E-03      -0.4      -0.4          HEAVYION
+HI-PROPE          6.       12.
+BEAMPOS                             -1.0
+* 
+GEOBEGIN                                                              COMBNAME
+    0    0              CNAO XPR collimators
+SPH BLK        0.0 0.0 0.0 50000.0
+SPH VOID       0.0 0.0 0.0 10000.0
+*
+* collimator
+#if Wcolli
+RPP COLLIP     $hgap   10.0 -5.0 5.0 0.0 2.5
+RPP COLLIN    -10.0  -$hgap -5.0 5.0 0.0 2.5
+$end_translat
+*
+#elif Cucolli
+RPP COLLIP     $hgap   10.0 -5.0 5.0 0.0 5.0
+RPP COLLIN    -10.0  -$hgap -5.0 5.0 0.0 5.0
+*
+#elif Nicolli
+RPP COLLIP     $hgap   10.0 -5.0 5.0 0.0 5.0
+RPP COLLIN    -10.0  -$hgap -5.0 5.0 0.0 5.0
+#endif
+*
+END
+BLACKH       5 +BLK   -VOID
+AIRAROL      5 +VOID
+#if Wcolli
+               -COLLIP -COLLIN
+COLLIP       5 +COLLIP
+COLLIN       5 +COLLIN
+#elif Cucolli
+               -COLLIP -COLLIN
+COLLIP       5 +COLLIP
+COLLIN       5 +COLLIN
+#elif Nicolli
+               -COLLIP -COLLIN
+COLLIP       5 +COLLIP
+COLLIN       5 +COLLIN
+#endif
+END
+GEOEND
+*
+* ***********************  MATERIAL ASSIGNMENT *************************
+*
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+ASSIGNMA    BLCKHOLE    BLACKH
+ASSIGNMA         AIR   AIRAROL
+#if Wcolli
+ASSIGNMA    TUNGSTEN    COLLIP    COLLIN
+#elif Cucolli
+ASSIGNMA      COPPER    COLLIP    COLLIN
+#elif Nicolli
+ASSIGNMA      NICKEL    COLLIP    COLLIN
+#endif
+*
+* ***********************  SCORING *************************************
+* Bragg peak
+#if Wcolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN           10.    ENERGY      -46.       10.        5.       2.5ENDEP-P
+USRBIN         $hgap       -5.       0.0        1.        1.      100.&
+USRBIN           10.    ENERGY      -46.    -$hgap        5.       2.5ENDEP-N
+USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+#elif Cucolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN           10.    ENERGY      -46.       10.        5.       5.0ENDEP-P
+USRBIN         $hgap       -5.       0.0        1.        1.      100.&
+USRBIN           10.    ENERGY      -46.    -$hgap        5.       5.0ENDEP-N
+USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+#elif Nicolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN           10.    ENERGY      -46.       10.        5.       5.0ENDEP-P
+USRBIN         $hgap       -5.       0.0        1.        1.      100.&
+USRBIN           10.    ENERGY      -46.    -$hgap        5.       5.0ENDEP-N
+USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+#endif
+*
+* residual activation
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+#if Wcolli
+RESNUCLE         3.0     -45.0                           3.0          COLLIP
+RESNUCLE         3.0     -45.0                           4.0          COLLIN
+#elif Cucolli
+RESNUCLE         3.0     -45.0                           3.0          COLLIP
+RESNUCLE         3.0     -45.0                           4.0          COLLIN
+#elif Nicolli
+RESNUCLE         3.0     -45.0                           3.0          COLLIP
+RESNUCLE         3.0     -45.0                           4.0          COLLIN
+#endif
+* 
+* residual dose (no AUXSCORE card: AMB64 default)
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+DCYSCORE         1.0                      DOSE-D01
+USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D01
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         1.0                      DOSE-D02
+USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D02
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         1.0                      DOSE-D03
+USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D03
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         1.0                      DOSE-D04
+USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D04
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         1.0                      DOSE-D05
+USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D05
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+*
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+RANDOMIZ          1.        1.
+START         10000.
+STOP
