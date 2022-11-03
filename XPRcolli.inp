@@ -7,8 +7,9 @@ XPR Collimators
 * #define Wcolli: tungsten, 25mm of length;
 * #define Cucolli: copper, 50mm of length;
 * #define Nicolli: nichel, 50mm of length;
+#define Wcolli
 * - half gap [cm]
-* #define hgap 0.1
+#define hgap 0.0
 *
 * physics settings for RP studies
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
@@ -57,7 +58,6 @@ SPH VOID       0.0 0.0 0.0 10000.0
 #if Wcolli
 RPP COLLIP     $hgap   10.0 -5.0 5.0 0.0 2.5
 RPP COLLIN    -10.0  -$hgap -5.0 5.0 0.0 2.5
-$end_translat
 *
 #elif Cucolli
 RPP COLLIP     $hgap   10.0 -5.0 5.0 0.0 5.0
@@ -137,23 +137,23 @@ RESNUCLE         3.0     -45.0                           4.0          COLLIN
 * 
 * residual dose (no AUXSCORE card: AMB64 default)
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-DCYSCORE         1.0                      DOSE-D01
+DCYSCORE         1.0                      DOSE-D01                    USRBIN
 USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D01
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
-DCYSCORE         1.0                      DOSE-D02
+DCYSCORE         1.0                      DOSE-D02                    USRBIN
 USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D02
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
-DCYSCORE         1.0                      DOSE-D03
+DCYSCORE         1.0                      DOSE-D03                    USRBIN
 USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D03
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
-DCYSCORE         1.0                      DOSE-D04
+DCYSCORE         1.0                      DOSE-D04                    USRBIN
 USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D04
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
-DCYSCORE         1.0                      DOSE-D05
+DCYSCORE         1.0                      DOSE-D05                    USRBIN
 USRBIN           10.   DOSE-EQ      -53.     140.0     140.0     140.0DOSE-D05
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
 *
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-RANDOMIZ          1.        1.
+RANDOMIZ                    1.
 START         10000.
 STOP
