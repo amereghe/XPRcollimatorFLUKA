@@ -1,8 +1,9 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b'XPR Collimators'
+Title: b"b'XPR Collimators'"
 Input: XPRcolli.inp
+Exec: /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Plot
@@ -50,11 +51,12 @@ Run: test01
 	Define:   hgap
 	Rnd:      1
 	Start:    1000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 	Prev:     0
 	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1667559856
+	StartRun: 1667562189
 
 	# USRxxx data file: test01_46.bnn
 	Data: \I_\U.\e
@@ -128,7 +130,7 @@ Plot: Green
 	basisv: 1 0 0
 	boundaries: 1
 	coord: Z-X
-	extends: 33.4898 21.5205
+	extends: 33.4898 25.1174
 	labels: 1
 	layer: Media
 	origin: -9.35024 0 4.49854
@@ -144,7 +146,7 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 100 64.4928
+	extends: 100 75
 	labels: 1
 	layer: Media
 	origin: 0 0 0
@@ -160,7 +162,7 @@ Plot: Magenta
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 100 64.6098
+	extends: 100 75
 	labels: 1
 	layer: Media
 	origin: 0 0 0
@@ -186,10 +188,10 @@ Plot: EndepP
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 2.3519833201135043
+	int: 1.9732901827082969
 	lw.0: 0
-	max: 3.36494260E-02
-	min: 3.32476566E-06
+	max: 2.45241299E-02
+	min: 6.71618618E-04
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -229,10 +231,10 @@ Plot: EndepN
 	grid: 0
 	hist: 1D Projection
 	index: 2
-	int: 2.4144840732299144
+	int: 2.1052339670131914
 	lw.0: 0
-	max: 3.43007781E-02
-	min: 3.43251736E-06
+	max: 2.65219770E-02
+	min: 7.05048791E-04
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -322,10 +324,10 @@ Plot: DOSE-EQ_T01
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 952616383.95974398
+	int: 29142622911.865234
 	lw.0: 0
-	max: 7506.49707
-	min: 2.11516926E-05
+	max: 176951.875
+	min: 58.3880272
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -365,10 +367,10 @@ Plot: DOSE-EQ_T02
 	grid: 0
 	hist: 2D Projection
 	index: 5
-	int: 901117874.10777605
+	int: 26844868066.894531
 	lw.0: 0
-	max: 7020.58496
-	min: 2.11288807E-05
+	max: 162867.828
+	min: 47.7036514
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -408,10 +410,10 @@ Plot: DOSE-EQ_T03
 	grid: 0
 	hist: 2D Projection
 	index: 6
-	int: 847060610.52631986
+	int: 24777228452.148438
 	lw.0: 0
-	max: 6465.67529
-	min: 2.10227772E-05
+	max: 150763.781
+	min: 42.5878067
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -451,10 +453,10 @@ Plot: DOSE-EQ_T04
 	grid: 0
 	hist: 2D Projection
 	index: 7
-	int: 734740886.12772930
+	int: 20318272735.839844
 	lw.0: 0
-	max: 5254.16504
-	min: 2.00257709E-05
+	max: 124698.672
+	min: 41.3993073
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -494,10 +496,10 @@ Plot: DOSE-EQ_T05
 	grid: 0
 	hist: 2D Projection
 	index: 8
-	int: 658736602.09397364
+	int: 16814490936.279297
 	lw.0: 0
-	max: 4484.19141
-	min: 1.78611626E-05
+	max: 103870.148
+	min: 41.3183479
 	proj: Y
 	ps.0: 0
 	pt.0: 0

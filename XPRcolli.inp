@@ -6,9 +6,9 @@ GLOBAL         9999.
 *
 * define vars
 * - collimator material and geometry:
-*      #define Wcolli: tungsten, 50mm of length;
-*      #define Cucolli: copper, 100mm of length;
-*      #define Nicolli: nichel, 100mm of length;
+*      #define Wcolli: tungsten, 30mm of length;
+*      #define Cucolli: copper, 60mm of length;
+*      #define Nicolli: nichel, 60mm of length;
 *      default: vacuum, 100mm of length;
 #define Wcolli
 * - half gap [cm]
