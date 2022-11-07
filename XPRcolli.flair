@@ -1,12 +1,12 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b"b'XPR Collimators'"
+Title: b'b"b\'XPR Collimators\'"'
 Input: XPRcolli.inp
 Exec: /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Plot
+Page: Run
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
@@ -56,7 +56,7 @@ Run: test01
 	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1667562189
+	StartRun: 1667827157
 
 	# USRxxx data file: test01_46.bnn
 	Data: \I_\U.\e
@@ -81,6 +81,40 @@ Run: test01
 		Rule: +,\I\d\d\d_fort\.\U
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
+
+	# USRxxx data file: test01_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: test02
+	Define:   Cucolli
+	Define:   hgap
+	Define:   pBeam
+	Start:    1000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     1
+	Status:   3
+	Pid:      0
+	StartRun: 1667828638
+End
+
+# Run information
+Run: test03
+	Define:   Nicolli
+	Define:   hgap=0.1
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     1
+	Status:   3
+	Pid:      0
+	StartRun: 1667828730
 End
 
 # Geometry Information
@@ -130,10 +164,10 @@ Plot: Green
 	basisv: 1 0 0
 	boundaries: 1
 	coord: Z-X
-	extends: 33.4898 25.1174
+	extends: 7.78866 5.44081
 	labels: 1
 	layer: Media
-	origin: -9.35024 0 4.49854
+	origin: -2.0362 0 -1.47239
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -146,7 +180,7 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 100 75
+	extends: 100 70.1087
 	labels: 1
 	layer: Media
 	origin: 0 0 0
@@ -162,7 +196,7 @@ Plot: Magenta
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 100 75
+	extends: 100 70.2359
 	labels: 1
 	layer: Media
 	origin: 0 0 0
@@ -188,10 +222,10 @@ Plot: EndepP
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 1.9732901827082969
+	int: 2.0304989358410239
 	lw.0: 0
-	max: 2.45241299E-02
-	min: 6.71618618E-04
+	max: 2.52055041E-02
+	min: 6.92828617E-04
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -210,97 +244,6 @@ Plot: EndepP
 	yrebin: 1
 	zlog: False
 	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "Bragg Peak - negative jaw"
-Plot: EndepN
-	Format: .eps
-	Type:   USRBIN
-	axes: Auto
-	cbcolors: 30
-	cblog: True
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: test01_46.bnn
-	det: 2
-	errors: 0
-	geo: -No-
-	grid: 0
-	hist: 1D Projection
-	index: 2
-	int: 2.1052339670131914
-	lw.0: 0
-	max: 2.65219770E-02
-	min: 7.05048791E-04
-	proj: Z
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: Bragg Peak - negative jaw
-	with.0: errorbars
-	x2log: False
-	x2tics: 0
-	xlabel: z [cm]
-	xlog: False
-	xrebin: 1
-	y2log: False
-	y2tics: 0
-	ylabel: Endep [GeV/cm3 per primary]
-	ylog: False
-	yrebin: 1
-	zlog: False
-	zrebin: 1
-	ztics: 0
-End
-
-# USR-1D plot "Endep"
-Plot: Endep
-	Format: .eps
-	Type:   USR-1D
-	block.0: 0
-	block.1: 0
-	cbcolors: 0
-	cblog: False
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	det.0: 0
-	det.1: 0
-	file.0: EndepP.dat
-	file.1: EndepN.dat
-	grid: 0
-	index: 3
-	key.0: 1
-	key.1: 1
-	lw.0: 1
-	lw.1: 1
-	name.0: Positive Jaw
-	name.1: Negative Jaw
-	ndetectors: 2
-	ps.0: 1
-	ps.1: 1
-	pt.0: 0
-	pt.1: 0
-	show.0: 1
-	show.1: 1
-	title: Endep
-	with.0: histogram
-	with.1: histogram
-	x2log: False
-	x2tics: 0
-	xlabel: z [cm]
-	xlog: False
-	y.0: 0
-	y.1: 0
-	y2log: False
-	y2tics: 0
-	ylabel: Endep [GeV/cm3 per primary]
-	ylog: False
-	zlog: False
 	ztics: 0
 End
 
@@ -323,11 +266,11 @@ Plot: DOSE-EQ_T01
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 4
-	int: 29142622911.865234
+	index: 2
+	int: 36801537527.343758
 	lw.0: 0
-	max: 176951.875
-	min: 58.3880272
+	max: 211099.297
+	min: 237.326965
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -366,11 +309,11 @@ Plot: DOSE-EQ_T02
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 5
-	int: 26844868066.894531
+	index: 3
+	int: 33250283666.015625
 	lw.0: 0
-	max: 162867.828
-	min: 47.7036514
+	max: 192237.172
+	min: 218.003632
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -409,11 +352,11 @@ Plot: DOSE-EQ_T03
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 6
-	int: 24777228452.148438
+	index: 4
+	int: 29734677963.867191
 	lw.0: 0
-	max: 150763.781
-	min: 42.5878067
+	max: 173766.500
+	min: 189.461563
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -452,11 +395,11 @@ Plot: DOSE-EQ_T04
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 7
-	int: 20318272735.839844
+	index: 5
+	int: 23443374365.234375
 	lw.0: 0
-	max: 124698.672
-	min: 41.3993073
+	max: 138614.000
+	min: 111.759918
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -495,16 +438,102 @@ Plot: DOSE-EQ_T05
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 8
-	int: 16814490936.279297
+	index: 6
+	int: 19381965212.890629
 	lw.0: 0
-	max: 103870.148
-	min: 41.3183479
+	max: 114382.734
+	min: 58.3432312
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Dose equivalent - t_{decay}=60min
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Dose equivalent - t_{decay}=1 day"
+Plot: DOSE-EQ_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test01_48.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 7
+	int: 3121239353.5156255
+	lw.0: 0
+	max: 18205.2988
+	min: 5.25053406
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Dose equivalent - t_{decay}=1 day
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Dose equivalent - t_{decay}=1 week"
+Plot: DOSE-EQ_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test01_48.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 8
+	int: 274459829.98143625
+	lw.0: 0
+	max: 1627.12964
+	min: 2.31059566E-05
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Dose equivalent - t_{decay}=1 week
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -688,7 +717,83 @@ Plot: DOSE-EQ_T05_max
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 12
+	index: 13
+	lw.0: 0
+	proj: Z
+	ps.0: 1
+	pt.0: 1
+	swap: 0
+	title: Plot #14
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #14"
+Plot: DOSE-EQ_T06_max
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test01_48.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 14
+	lw.0: 0
+	proj: Z
+	ps.0: 1
+	pt.0: 1
+	swap: 0
+	title: Plot #14
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #14"
+Plot: DOSE-EQ_T07_max
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test01_48.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 15
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -718,22 +823,28 @@ Plot: DOSE-EQ_max
 	block.2: 0
 	block.3: 0
 	block.4: 0
+	block.5: 0
+	block.6: 0
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
-	cbtics: 0
+	cbtics: 1
 	cpd: 0
 	det.0: 0
 	det.1: 0
 	det.2: 0
 	det.3: 0
 	det.4: 0
+	det.5: 0
+	det.6: 0
 	file.0: DOSE-EQ_T01_max.dat
 	file.1: DOSE-EQ_T02_max.dat
 	file.2: DOSE-EQ_T03_max.dat
 	file.3: DOSE-EQ_T04_max.dat
 	file.4: DOSE-EQ_T05_max.dat
+	file.5: DOSE-EQ_T06_max.dat
+	file.6: DOSE-EQ_T07_max.dat
 	grid: 0
 	index: 13
 	key.0: 1
@@ -741,38 +852,52 @@ Plot: DOSE-EQ_max
 	key.2: 1
 	key.3: 1
 	key.4: 1
+	key.5: 1
+	key.6: 1
 	lw.0: 1
 	lw.1: 1
 	lw.2: 1
 	lw.3: 1
 	lw.4: 1
+	lw.5: 1
+	lw.6: 1
 	name.0: Max Dose T01
 	name.1: Max Dose T02
 	name.2: Max Dose T03
 	name.3: Max Dose T04
 	name.4: Max Dose T05
-	ndetectors: 5
+	name.5: Max Dose T06
+	name.6: Max Dose T07
+	ndetectors: 7
 	ps.0: 1
 	ps.1: 1
 	ps.2: 1
 	ps.3: 1
 	ps.4: 1
+	ps.5: 1
+	ps.6: 1
 	pt.0: 1
 	pt.1: 1
 	pt.2: 1
 	pt.3: 1
 	pt.4: 1
+	pt.5: 1
+	pt.6: 1
 	show.0: 1
 	show.1: 1
 	show.2: 1
 	show.3: 1
 	show.4: 1
+	show.5: 1
+	show.6: 1
 	title: Plot #19
 	with.0: xyerrorbars
 	with.1: xyerrorbars
 	with.2: xyerrorbars
 	with.3: xyerrorbars
 	with.4: xyerrorbars
+	with.5: xyerrorbars
+	with.6: xyerrorbars
 	x2log: False
 	x2tics: 0
 	xlog: False
@@ -781,9 +906,11 @@ Plot: DOSE-EQ_max
 	y.2: 0
 	y.3: 0
 	y.4: 0
+	y.5: 0
+	y.6: 0
 	y2log: False
 	y2tics: 0
-	ylog: False
+	ylog: True
 	zlog: False
 	ztics: 0
 End
@@ -817,8 +944,8 @@ Plot: RESNUC_T01
 	ztics: 0
 End
 
-# RESNUCLE plot "RESNUCLEI - t_{decay}=60min"
-Plot: RESNUC_T05
+# RESNUCLE plot "RESNUCLEI - t_{decay}=1week"
+Plot: RESNUC_T07
 	Format: .eps
 	Type:   RESNUCLE
 	cbcolors: 0
@@ -828,13 +955,13 @@ Plot: RESNUC_T05
 	cbtics: 1
 	cpd: 0
 	datafile: test01_47.rnc
-	det: 9
+	det: 7
 	grid: 0
 	index: 15
 	lw.0: 0
 	plot: Z/A
 	ps.0: 0
-	title: RESNUCLEI - t_{decay}=60min
+	title: RESNUCLEI - t_{decay}=1week
 	with.0: errorbars
 	x2log: False
 	x2tics: 0

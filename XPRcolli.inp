@@ -1,8 +1,6 @@
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 TITLE
 XPR Collimators
-* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-GLOBAL         9999.
 *
 * define vars
 * - collimator material and geometry:
@@ -11,8 +9,14 @@ GLOBAL         9999.
 *      #define Nicolli: nichel, 60mm of length;
 *      default: vacuum, 100mm of length;
 #define Wcolli
+#define Cucolli
+#define Nicolli
 * - half gap [cm]
 #define hgap 0.0
+* - beam particle
+*      #define pBeam: proton, 230 MeV (H2O range of 320mm);
+*      default: C 400MeV/u (H2O range of 270mm);
+* #define pBeam
 *
 * physics settings for RP studies
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
@@ -23,6 +27,11 @@ IONTRANS    HEAVYION
 PHYSICS          3.0                                                  EVAPORAT
 * Coalescence actvivated
 PHYSICS          1.0                                                  COALESCE
+* Point-wise x-sec
+* All isotopes for all materials at 296 K, leaving Fluka to decide which
+*  evaluations to pick up for each of them:
+*...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
+LOW-PWXS         1.0                           3.0  @LASTMAT            
 * Activate radioactive decays
 RADDECAY         1.0                 3.0                                      
 * Irradiation profile:
@@ -31,9 +40,13 @@ RADDECAY         1.0                 3.0
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 IRRPROFI      57.6E3       8E8
 * Define cooling times
-*               2min      5min     10min     30min     60min
+*               2min      5min     10min     30min     60min      1day
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-DCYTIMES        120.      300.      600.     1800.     3600.
+DCYTIMES        120.      300.      600.     1800.     3600.    86400.
+*
+*              1week
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+DCYTIMES     604800.
 *
 * physics settings from FM
 * DEFAULTS                                                              HADROTHE
@@ -43,11 +56,16 @@ DELTARAY         -1.                      BLCKHOLE  @LASTMAT
 *
 * beam properties
 * RRossi:
-* - spatial: rect delta X,Y=1cm;
+* - spatial: rect delta X,Y=1cm; --> C-12@270mm: FWHM=4mm; p@320mm: FWHM=11mm;
 * - angular: Gaussian, sigma_X,Y=1mrad;
+#if pBeam
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+BEAM          -0.230               -2.35      -1.1      -1.1          PROTON
+#else
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 BEAM          -0.400               -2.35      -0.4      -0.4          HEAVYION
 HI-PROPE          6.       12.
+#endif
 BEAMPOS                             -1.0
 * 
 GEOBEGIN                                                              COMBNAME
@@ -85,13 +103,16 @@ GEOEND
 *
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 ASSIGNMA    BLCKHOLE    BLACKH
-ASSIGNMA         AIR   AIRAROL
+ASSIGNMA      VACUUM   AIRAROL
 #if Wcolli
-ASSIGNMA    TUNGSTEN    COLLIP    COLLIN
+ASSIGNMA    TUNGSTEN    COLLIP
+ASSIGNMA    TUNGSTEN    COLLIN                                  VACUUM
 #elif Cucolli
-ASSIGNMA      COPPER    COLLIP    COLLIN
+ASSIGNMA      COPPER    COLLIP
+ASSIGNMA      COPPER    COLLIN                                  VACUUM
 #elif Nicolli
-ASSIGNMA      NICKEL    COLLIP    COLLIN
+ASSIGNMA      NICKEL    COLLIP
+ASSIGNMA      NICKEL    COLLIN                                  VACUUM
 #else
 ASSIGNMA      VACUUM    COLLIP    COLLIN
 #endif
@@ -100,47 +121,38 @@ ASSIGNMA      VACUUM    COLLIP    COLLIN
 * Bragg peak
 #if Wcolli
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-USRBIN           10.    ENERGY      -46.       10.        5.       3.0ENDEP-P
-USRBIN         $hgap       -5.       0.0        1.        1.      100.&
-USRBIN           10.    ENERGY      -46.    -$hgap        5.       3.0ENDEP-N
-USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+USRBIN           13.    ENERGY      -46.       10.        5.       3.0ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.       60.&
 #elif Cucolli
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-USRBIN           10.    ENERGY      -46.       10.        5.       6.0ENDEP-P
-USRBIN         $hgap       -5.       0.0        1.        1.      100.&
-USRBIN           10.    ENERGY      -46.    -$hgap        5.       6.0ENDEP-N
-USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+USRBIN           13.    ENERGY      -46.       10.        5.       6.0ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.       60.&
 #elif Nicolli
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-USRBIN           10.    ENERGY      -46.       10.        5.       6.0ENDEP-P
-USRBIN         $hgap       -5.       0.0        1.        1.      100.&
-USRBIN           10.    ENERGY      -46.    -$hgap        5.       6.0ENDEP-N
-USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+USRBIN           13.    ENERGY      -46.       10.        5.       6.0ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.       60.&
 #else
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-USRBIN           10.    ENERGY      -46.       10.        5.      10.0ENDEP-P
-USRBIN         $hgap       -5.       0.0        1.        1.      100.&
-USRBIN           10.    ENERGY      -46.    -$hgap        5.      10.0ENDEP-N
-USRBIN         -10.0       -5.       0.0        1.        1.      100.&
+USRBIN           13.    ENERGY      -46.       10.        5.      10.0ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.       60.&
 #endif
 *
 * residual activation
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-DCYSCORE         1.0                        CP-D01    CN-D01          RESNUCLE
+DCYSCORE         1.0                        CP-D01                    RESNUCLE
 RESNUCLE         3.0     -47.0                        COLLIP          CP-D01
-RESNUCLE         3.0     -47.0                        COLLIN          CN-D01
-DCYSCORE         2.0                        CP-D02    CN-D02          RESNUCLE
+DCYSCORE         2.0                        CP-D02                    RESNUCLE
 RESNUCLE         3.0     -47.0                        COLLIP          CP-D02
-RESNUCLE         3.0     -47.0                        COLLIN          CN-D02
-DCYSCORE         3.0                        CP-D03    CN-D03          RESNUCLE
+DCYSCORE         3.0                        CP-D03                    RESNUCLE
 RESNUCLE         3.0     -47.0                        COLLIP          CP-D03
-RESNUCLE         3.0     -47.0                        COLLIN          CN-D03
-DCYSCORE         4.0                        CP-D04    CN-D04          RESNUCLE
+DCYSCORE         4.0                        CP-D04                    RESNUCLE
 RESNUCLE         3.0     -47.0                        COLLIP          CP-D04
-RESNUCLE         3.0     -47.0                        COLLIN          CN-D04
-DCYSCORE         5.0                        CP-D05    CN-D05          RESNUCLE
+DCYSCORE         5.0                        CP-D05                    RESNUCLE
 RESNUCLE         3.0     -47.0                        COLLIP          CP-D05
-RESNUCLE         3.0     -47.0                        COLLIN          CN-D05
+DCYSCORE         6.0                        CP-D06                    RESNUCLE
+RESNUCLE         3.0     -47.0                        COLLIP          CP-D06
+DCYSCORE         7.0                        CP-D07                    RESNUCLE
+RESNUCLE         3.0     -47.0                        COLLIP          CP-D07
 * 
 * residual dose (no AUXSCORE card: AMB64 default)
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
@@ -159,6 +171,86 @@ USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
 DCYSCORE         5.0                      DOSE-D05                    USRBIN
 USRBIN           10.   DOSE-EQ      -48.     140.0     140.0     140.0DOSE-D05
 USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         6.0                      DOSE-D06                    USRBIN
+USRBIN           10.   DOSE-EQ      -48.     140.0     140.0     140.0DOSE-D06
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+DCYSCORE         7.0                      DOSE-D07                    USRBIN
+USRBIN           10.   DOSE-EQ      -48.     140.0     140.0     140.0DOSE-D07
+USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0&
+* 
+* residual activation
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+#if Wcolli
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.        6.&
+#elif Cucolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+#elif Nicolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.       12.&
+#else
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.       20.&
+#endif
+DCYSCORE         1.0                      ACTMPD01                    USRBIN
+DCYSCORE         2.0                      ACTMPD02                    USRBIN
+DCYSCORE         3.0                      ACTMPD03                    USRBIN
+DCYSCORE         4.0                      ACTMPD04                    USRBIN
+DCYSCORE         5.0                      ACTMPD05                    USRBIN
+DCYSCORE         6.0                      ACTMPD06                    USRBIN
+DCYSCORE         7.0                      ACTMPD07                    USRBIN
 *
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 RANDOMIZ                    1.
