@@ -1,12 +1,12 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b'b"b\'XPR Collimators\'"'
+Title: b'b\'b\\\'b\\\\\\\'b\\\\\\\\\\\\\\\'b"b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'XPR Collimators\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'"\\\\\\\\\\\\\\\'\\\\\\\'\\\'\''
 Input: XPRcolli.inp
 Exec: /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Run
+Page: Output
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
@@ -117,6 +117,215 @@ Run: test03
 	StartRun: 1667828730
 End
 
+# Run information
+Run: test_C_W_PW
+	Define:   Wcolli
+	Define:   hgap
+	Define:   lowpwxs
+	Start:    2000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1667985638
+
+	# USRxxx data file: test_C_W_PW_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_PW_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: test_C_W_groups
+	Define:   Wcolli
+	Define:   hgap
+	Start:    2000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1667985882
+
+	# USRxxx data file: test_C_W_groups_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_groups_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: test_C_W_selfShielded
+	Define:   Wcolli
+	Define:   hgap
+	Define:   selfshield
+	Start:    2000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1667986261
+
+	# USRxxx data file: test_C_W_selfShielded_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test_C_W_selfShielded_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
@@ -215,17 +424,17 @@ Plot: EndepP
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_46.bnn
+	datafile: test_C_W_PW_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 2.0304989358410239
+	int: 2.0265206473413855
 	lw.0: 0
-	max: 2.52055041E-02
-	min: 6.92828617E-04
+	max: 2.35431902E-02
+	min: 7.50623236E-04
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -247,7 +456,7 @@ Plot: EndepP
 	ztics: 0
 End
 
-# USRBIN plot "Dose equivalent - t_{decay}=2min"
+# USRBIN plot "Dose equivalent - t_{decay}=0s"
 Plot: DOSE-EQ_T01
 	Format: .eps
 	Type:   USRBIN
@@ -260,17 +469,60 @@ Plot: DOSE-EQ_T01
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 2
-	int: 36801537527.343758
+	int: 56439116044.921883
 	lw.0: 0
-	max: 211099.297
-	min: 237.326965
+	max: 349454.500
+	min: 261.680817
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Dose equivalent - t_{decay}=0s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Dose equivalent - t_{decay}=2min"
+Plot: DOSE-EQ_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test_C_W_PW_48.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 35932826560.546883
+	lw.0: 0
+	max: 209850.047
+	min: 222.229340
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -291,7 +543,7 @@ Plot: DOSE-EQ_T01
 End
 
 # USRBIN plot "Dose equivalent - t_{decay}=5min"
-Plot: DOSE-EQ_T02
+Plot: DOSE-EQ_T03
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -303,17 +555,17 @@ Plot: DOSE-EQ_T02
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 2
+	datafile: test_C_W_PW_48.bnn
+	det: 3
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 3
-	int: 33250283666.015625
+	index: 4
+	int: 32760821694.335945
 	lw.0: 0
-	max: 192237.172
-	min: 218.003632
+	max: 192134.500
+	min: 186.521896
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -334,7 +586,7 @@ Plot: DOSE-EQ_T02
 End
 
 # USRBIN plot "Dose equivalent - t_{decay}=10min"
-Plot: DOSE-EQ_T03
+Plot: DOSE-EQ_T04
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -346,17 +598,17 @@ Plot: DOSE-EQ_T03
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 3
+	datafile: test_C_W_PW_48.bnn
+	det: 4
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 4
-	int: 29734677963.867191
+	index: 5
+	int: 29675785380.859375
 	lw.0: 0
-	max: 173766.500
-	min: 189.461563
+	max: 174980.875
+	min: 157.201904
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -377,7 +629,7 @@ Plot: DOSE-EQ_T03
 End
 
 # USRBIN plot "Dose equivalent - t_{decay}=30min"
-Plot: DOSE-EQ_T04
+Plot: DOSE-EQ_T05
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -389,17 +641,17 @@ Plot: DOSE-EQ_T04
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 4
+	datafile: test_C_W_PW_48.bnn
+	det: 5
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 5
-	int: 23443374365.234375
+	index: 6
+	int: 23872096157.714848
 	lw.0: 0
-	max: 138614.000
-	min: 111.759918
+	max: 141671.594
+	min: 112.192528
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -419,8 +671,8 @@ Plot: DOSE-EQ_T04
 	ztics: 0
 End
 
-# USRBIN plot "Dose equivalent - t_{decay}=60min"
-Plot: DOSE-EQ_T05
+# USRBIN plot "Dose equivalent - t_{decay}=60m"
+Plot: DOSE-EQ_T06
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -432,22 +684,22 @@ Plot: DOSE-EQ_T05
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 5
+	datafile: test_C_W_PW_48.bnn
+	det: 6
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 6
-	int: 19381965212.890629
+	index: 7
+	int: 19896902680.664066
 	lw.0: 0
-	max: 114382.734
-	min: 58.3432312
+	max: 118111.797
+	min: 83.3971710
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Dose equivalent - t_{decay}=60min
+	title: Dose equivalent - t_{decay}=60m
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -463,7 +715,7 @@ Plot: DOSE-EQ_T05
 End
 
 # USRBIN plot "Dose equivalent - t_{decay}=1 day"
-Plot: DOSE-EQ_T06
+Plot: DOSE-EQ_T07
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -475,17 +727,17 @@ Plot: DOSE-EQ_T06
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 6
+	datafile: test_C_W_PW_48.bnn
+	det: 7
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 7
-	int: 3121239353.5156255
+	index: 8
+	int: 3303822579.1015620
 	lw.0: 0
-	max: 18205.2988
-	min: 5.25053406
+	max: 19682.5020
+	min: 12.4383965
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -506,7 +758,7 @@ Plot: DOSE-EQ_T06
 End
 
 # USRBIN plot "Dose equivalent - t_{decay}=1 week"
-Plot: DOSE-EQ_T07
+Plot: DOSE-EQ_T08
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -518,17 +770,17 @@ Plot: DOSE-EQ_T07
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
-	det: 7
+	datafile: test_C_W_PW_48.bnn
+	det: 8
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 8
-	int: 274459829.98143625
+	index: 9
+	int: 276810590.95513821
 	lw.0: 0
-	max: 1627.12964
-	min: 2.31059566E-05
+	max: 1669.28992
+	min: 1.86155643E-02
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -559,13 +811,13 @@ Plot: DOSE-EQ_T01_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 9
+	index: 10
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -597,13 +849,13 @@ Plot: DOSE-EQ_T02_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 2
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 10
+	index: 11
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -635,13 +887,13 @@ Plot: DOSE-EQ_T03_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 3
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 11
+	index: 12
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -673,13 +925,13 @@ Plot: DOSE-EQ_T04_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 4
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 12
+	index: 13
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -711,13 +963,13 @@ Plot: DOSE-EQ_T05_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 5
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 13
+	index: 14
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -749,13 +1001,13 @@ Plot: DOSE-EQ_T06_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 6
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 14
+	index: 15
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -787,13 +1039,51 @@ Plot: DOSE-EQ_T07_max
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_48.bnn
+	datafile: test_C_W_PW_48.bnn
 	det: 7
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Max
-	index: 15
+	index: 16
+	lw.0: 0
+	proj: Z
+	ps.0: 1
+	pt.0: 1
+	swap: 0
+	title: Plot #14
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #14"
+Plot: DOSE-EQ_T08_max
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test_C_W_PW_48.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 17
 	lw.0: 0
 	proj: Z
 	ps.0: 1
@@ -825,6 +1115,7 @@ Plot: DOSE-EQ_max
 	block.4: 0
 	block.5: 0
 	block.6: 0
+	block.7: 0
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
@@ -838,6 +1129,7 @@ Plot: DOSE-EQ_max
 	det.4: 0
 	det.5: 0
 	det.6: 0
+	det.7: 0
 	file.0: DOSE-EQ_T01_max.dat
 	file.1: DOSE-EQ_T02_max.dat
 	file.2: DOSE-EQ_T03_max.dat
@@ -845,6 +1137,7 @@ Plot: DOSE-EQ_max
 	file.4: DOSE-EQ_T05_max.dat
 	file.5: DOSE-EQ_T06_max.dat
 	file.6: DOSE-EQ_T07_max.dat
+	file.7: DOSE-EQ_T08_max.dat
 	grid: 0
 	index: 13
 	key.0: 1
@@ -854,6 +1147,7 @@ Plot: DOSE-EQ_max
 	key.4: 1
 	key.5: 1
 	key.6: 1
+	key.7: 1
 	lw.0: 1
 	lw.1: 1
 	lw.2: 1
@@ -861,6 +1155,7 @@ Plot: DOSE-EQ_max
 	lw.4: 1
 	lw.5: 1
 	lw.6: 1
+	lw.7: 1
 	name.0: Max Dose T01
 	name.1: Max Dose T02
 	name.2: Max Dose T03
@@ -868,7 +1163,8 @@ Plot: DOSE-EQ_max
 	name.4: Max Dose T05
 	name.5: Max Dose T06
 	name.6: Max Dose T07
-	ndetectors: 7
+	name.7: Max Dose T08
+	ndetectors: 8
 	ps.0: 1
 	ps.1: 1
 	ps.2: 1
@@ -876,6 +1172,7 @@ Plot: DOSE-EQ_max
 	ps.4: 1
 	ps.5: 1
 	ps.6: 1
+	ps.7: 1
 	pt.0: 1
 	pt.1: 1
 	pt.2: 1
@@ -883,6 +1180,7 @@ Plot: DOSE-EQ_max
 	pt.4: 1
 	pt.5: 1
 	pt.6: 1
+	pt.7: 1
 	show.0: 1
 	show.1: 1
 	show.2: 1
@@ -890,6 +1188,7 @@ Plot: DOSE-EQ_max
 	show.4: 1
 	show.5: 1
 	show.6: 1
+	show.7: 1
 	title: Plot #19
 	with.0: xyerrorbars
 	with.1: xyerrorbars
@@ -898,6 +1197,7 @@ Plot: DOSE-EQ_max
 	with.4: xyerrorbars
 	with.5: xyerrorbars
 	with.6: xyerrorbars
+	with.7: xyerrorbars
 	x2log: False
 	x2tics: 0
 	xlog: False
@@ -908,6 +1208,7 @@ Plot: DOSE-EQ_max
 	y.4: 0
 	y.5: 0
 	y.6: 0
+	y.7: 0
 	y2log: False
 	y2tics: 0
 	ylog: True
@@ -915,7 +1216,7 @@ Plot: DOSE-EQ_max
 	ztics: 0
 End
 
-# RESNUCLE plot "RESNUCLEI - t_{decay}=2min"
+# RESNUCLE plot "RESNUCLEI - t_{decay}=0s"
 Plot: RESNUC_T01
 	Format: .eps
 	Type:   RESNUCLE
@@ -925,14 +1226,14 @@ Plot: RESNUC_T01
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_47.rnc
+	datafile: test_C_W_PW_47.rnc
 	det: 1
 	grid: 0
 	index: 14
 	lw.0: 0
 	plot: Z/A
 	ps.0: 0
-	title: RESNUCLEI - t_{decay}=2min
+	title: RESNUCLEI - t_{decay}=0s
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -944,7 +1245,7 @@ Plot: RESNUC_T01
 	ztics: 0
 End
 
-# RESNUCLE plot "RESNUCLEI - t_{decay}=1week"
+# RESNUCLE plot "RESNUCLEI - t_{decay}=1day"
 Plot: RESNUC_T07
 	Format: .eps
 	Type:   RESNUCLE
@@ -954,18 +1255,246 @@ Plot: RESNUC_T07
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test01_47.rnc
+	datafile: test_C_W_PW_47.rnc
 	det: 7
 	grid: 0
 	index: 15
 	lw.0: 0
 	plot: Z/A
 	ps.0: 0
-	title: RESNUCLEI - t_{decay}=1week
+	title: RESNUCLEI - t_{decay}=1day
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
 	xlog: False
+	y2log: False
+	y2tics: 0
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot ""
+Plot: NeuFluence_all
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	cpd: 0
+	det.0: 1
+	det.1: 0
+	det.2: 1
+	det.3: 0
+	det.4: 1
+	det.5: 0
+	file.0: test_C_W_PW_50_tab.lis
+	file.1: test_C_W_PW_50_tab.lis
+	file.2: test_C_W_groups_50_tab.lis
+	file.3: test_C_W_groups_50_tab.lis
+	file.4: test_C_W_selfShielded_50_tab.lis
+	file.5: test_C_W_selfShielded_50_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	lc.0: red
+	lc.1: magenta
+	lc.2: blue
+	lc.3: light-blue
+	lc.4: dark-green
+	lc.5: light-green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	name.0: PW xsec - PW scoring
+	name.1: PW xsec - groups scoring
+	name.2: groups tracking - PW scoring
+	name.3: groups tracking - groups scoring
+	name.4: selfshielded tracking - PW scoring
+	name.5: selfshielded tracking - groups scoring
+	ndetectors: 6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	with.4: histogram
+	with.5: histogram
+	x2log: False
+	x2tics: 0
+	xlog: True
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y2log: False
+	y2tics: 0
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "Plot #26"
+Plot: NeuFluence_groupScoring
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	file.0: test_C_W_PW_50_tab.lis
+	file.1: test_C_W_groups_50_tab.lis
+	file.2: test_C_W_selfShielded_50_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	name.0: Pointwise Xsec
+	name.1: groups
+	name.2: self-shielded
+	ndetectors: 3
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	title: Plot #26
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	x2log: False
+	x2tics: 0
+	xlog: True
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y2log: False
+	y2tics: 0
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Plot #27"
+Plot: BEAMPARTflu
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test_C_W_PW_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1.0587686798198779
+	lw.0: 0
+	max: 7.57036880E-02
+	min: 2.34081654E-07
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Plot #27
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Plot #28"
+Plot: BEAMPARTflu
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	cpd: 0
+	det.0: 0
+	file.0: test_C_W_PW_52_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	lw.0: 1
+	name.0: #Detector 1
+	ndetectors: 1
+	ps.0: 1
+	pt.0: 0
+	show.0: 1
+	title: Plot #28
+	with.0: histogram
+	x2log: False
+	x2tics: 0
+	xlog: False
+	y.0: 0
 	y2log: False
 	y2tics: 0
 	ylog: False
