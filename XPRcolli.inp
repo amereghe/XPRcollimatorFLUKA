@@ -4,7 +4,7 @@ XPR Collimators
 *
 * define vars
 * - collimator material and geometry:
-*      #define Wcolli: tungsten, 30mm of length;
+*      #define Wcolli: tungsten, 35mm of length;
 *      #define Cucolli: copper, 60mm of length;
 *      #define Nicolli: nichel, 60mm of length;
 *      default: vacuum, 100mm of length;
@@ -87,8 +87,8 @@ SPH VOID       0.0 0.0 0.0 10000.0
 *
 * collimator
 #if Wcolli 
-RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 3.0
-RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 3.0
+RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 3.5
+RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 3.5
 *
 #elif Cucolli 
 RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 6.0
@@ -133,8 +133,8 @@ ASSIGNMA      VACUUM    COLLIP    COLLIN
 * Bragg peak
 #if Wcolli 
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-USRBIN           13.    ENERGY      -46.       10.        5.       3.0ENDEP
-USRBIN         $hgap       -5.       0.0        1.        1.       60. &
+USRBIN           13.    ENERGY      -46.       10.        5.       3.5ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.       70. &
 #elif Cucolli 
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN           13.    ENERGY      -46.       10.        5.       6.0ENDEP
@@ -146,7 +146,7 @@ USRBIN         $hgap       -5.       0.0        1.        1.       60. &
 #else  
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN           13.    ENERGY      -46.       10.        5.      10.0ENDEP
-USRBIN         $hgap       -5.       0.0        1.        1.       60. &
+USRBIN         $hgap       -5.       0.0        1.        1.      100. &
 #endif  
 *
 * residual activation
@@ -198,22 +198,22 @@ USRBIN        -140.0    -140.0    -140.0       7.0       7.0       7.0 &
 * residual activation
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 #if Wcolli 
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD01
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD02
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD03
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD04
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD05
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD06
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD07
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
-USRBIN            0.  ACTOMASS      -49.       10.        5.       3.0ACTMPD08
-USRBIN         $hgap       -5.       0.0       20.       20.        6. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       3.5ACTMPD08
+USRBIN         $hgap       -5.       0.0       20.       20.        7. &
 #elif Cucolli 
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD01
