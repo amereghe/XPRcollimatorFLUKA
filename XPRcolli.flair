@@ -1,12 +1,12 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b'b\'b\\\'b\\\\\\\'b\\\\\\\\\\\\\\\'b"b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'XPR Collimators\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'"\\\\\\\\\\\\\\\'\\\\\\\'\\\'\''
+Title: b'b\'b\\\'b\\\\\\\'b\\\\\\\\\\\\\\\'b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'b"b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'XPR Collimators\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\'\\\\\\\'\\\'\''
 Input: XPRcolli.inp
 Exec: /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Output
+Page: Plot
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
@@ -49,6 +49,7 @@ End
 Run: test01
 	Define:   Wcolli
 	Define:   hgap
+	Define:   pBeam
 	Rnd:      1
 	Start:    1000
 	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
@@ -56,7 +57,7 @@ Run: test01
 	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1667827157
+	StartRun: 1668071001
 
 	# USRxxx data file: test01_46.bnn
 	Data: \I_\U.\e
@@ -89,6 +90,30 @@ Run: test01
 		Rule: +,\I\d\d\d_fort\.\U
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
+
+	# USRxxx data file: test01_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test01_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test01_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
 End
 
 # Run information
@@ -99,22 +124,136 @@ Run: test02
 	Start:    1000
 	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 	Prev:     0
-	Last:     1
+	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1667828638
+	StartRun: 1668071081
+
+	# USRxxx data file: test02_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test02_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
 End
 
 # Run information
 Run: test03
 	Define:   Nicolli
-	Define:   hgap=0.1
+	Define:   hgap
+	Define:   pBeam
+	Start:    1000
 	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
 	Prev:     0
-	Last:     1
+	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1667828730
+	StartRun: 1668071154
+
+	# USRxxx data file: test03_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test03_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
 End
 
 # Run information
@@ -326,6 +465,213 @@ Run: test_C_W_selfShielded
 	End
 End
 
+# Run information
+Run: test04
+	Define:   Wcolli
+	Define:   hgap
+	Start:    1000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1668072556
+
+	# USRxxx data file: test04_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test04_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: test05
+	Define:   Cucolli
+	Define:   hgap
+	Start:    1000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1668072585
+
+	# USRxxx data file: test05_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test05_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: test06
+	Define:   Nicolli
+	Define:   hgap
+	Start:    1000
+	Exe:      /usr/local/FLUKA_INFN/2021.2.7/flukadpm3
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1668072749
+
+	# USRxxx data file: test06_46.bnn
+	Data: \I_\U.\e
+		Unit: 46
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_47.rnc
+	Data: \I_\U.\e
+		Unit: 47
+		Type: r
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_48.bnn
+	Data: \I_\U.\e
+		Unit: 48
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_49.bnn
+	Data: \I_\U.\e
+		Unit: 49
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_50.trk
+	Data: \I_\U.\e
+		Unit: 50
+		Type: t
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: test06_52.bnx
+	Data: \I_\U.\e
+		Unit: 52
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
@@ -414,7 +760,7 @@ Plot: Magenta
 End
 
 # USRBIN plot "Bragg Peak - positive jaw"
-Plot: EndepP
+Plot: Endep
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
@@ -424,22 +770,280 @@ Plot: EndepP
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: test_C_W_PW_46.bnn
+	datafile: test03_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 2.0265206473413855
+	int: 0.10599697082170678
 	lw.0: 0
-	max: 2.35431902E-02
-	min: 7.50623236E-04
+	max: 5.14396408E-04
+	min: 1.43633258E-06
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Bragg Peak - positive jaw
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - W"
+Plot: Endep_W_p
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test01_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10250599311007136
+	lw.0: 0
+	max: 7.46702077E-04
+	min: 2.29171678E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - W
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - W"
+Plot: Endep_W_C
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test04_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 2.0661953384114895
+	lw.0: 0
+	max: 2.39043161E-02
+	min: 4.60861804E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - W
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - Ni"
+Plot: Endep_Ni_p
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test03_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10599697082170678
+	lw.0: 0
+	max: 5.14396408E-04
+	min: 1.43633258E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - Ni
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - Ni"
+Plot: Endep_Ni_C
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test06_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 2.0072198513662443
+	lw.0: 0
+	max: 1.10435877E-02
+	min: 3.96176794E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - Ni
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - Cu"
+Plot: Endep_Cu_p
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test02_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10445642477975525
+	lw.0: 0
+	max: 4.57054499E-04
+	min: 1.64568871E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - Cu
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - Cu"
+Plot: Endep_Cu_C
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: test05_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 1.9808230563648976
+	lw.0: 0
+	max: 1.18195890E-02
+	min: 4.23384918E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - Cu
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -1497,6 +2101,124 @@ Plot: BEAMPARTflu
 	y.0: 0
 	y2log: False
 	y2tics: 0
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "Bragg Peak"
+Plot: EndepCompareMaterials_p
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	file.0: Endep_W.dat
+	file.1: Endep_Cu.dat
+	file.2: Endep_Ni.dat
+	grid: 0
+	index: 1
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	ndetectors: 3
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	title: Bragg Peak
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "Bragg Peak"
+Plot: EndepCompareMaterials_C
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	file.0: Endep_W_C.dat
+	file.1: Endep_Cu_C.dat
+	file.2: Endep_Ni_C.dat
+	grid: 0
+	index: 2
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	ndetectors: 3
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	title: Bragg Peak
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y2log: False
+	y2tics: 0
+	ylabel: Endep [GeV/cm3 per primary]
 	ylog: False
 	zlog: False
 	ztics: 0
