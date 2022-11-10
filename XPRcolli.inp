@@ -7,10 +7,12 @@ XPR Collimators
 *      #define Wcolli: tungsten, 35mm of length;
 *      #define Cucolli: copper, 60mm of length;
 *      #define Nicolli: nichel, 60mm of length;
+*      #define Brasscolli: brass, 65mm of length;
 *      default: vacuum, 100mm of length;
 #define Wcolli 
 #define Cucolli 
-#define Nicolli 
+#define Nicolli
+#define Brasscolli
 * - half gap [cm]
 #define hgap 0.0
 * - beam particle
@@ -39,18 +41,32 @@ LOW-PWXS         1.0                           3.0  @LASTMAT
 LOW-MAT     TUNGSTEN       74.       -4.      296.                    TUNGSTEN
 LOW-MAT       NICKEL       28.       -4.      296.                    NICKEL
 LOW-MAT       COPPER       29.       -4.      296.                    COPPER
+* for brass
+LOW-MAT     ALUMINUM       13.     1027.      296.                    ALUMINUM
+LOW-MAT         IRON       26.       -4.      296.                    IRON
+LOW-MAT         LEAD       82.       -4.      296.                    LEAD
 #else
 LOW-MAT     TUNGSTEN       74.       -2.      296.                    TUNGSTEN
 LOW-MAT       NICKEL       28.       -2.      296.                    NICKEL
 LOW-MAT       COPPER       29.       -2.      296.                    COPPER
+* for brass
+LOW-MAT     ALUMINUM       13.       27.      296.                    ALUMINUM
+LOW-MAT         IRON       26.       -2.      296.                    IRON
+LOW-MAT         LEAD       82.       -2.      296.                    LEAD
 #endif  
 * Activate radioactive decays
 RADDECAY         1.0                 3.0
 * Irradiation profile:
 * - 16h --> 57.6E3 s;
-* - 8E8 C&s
+#if pBeam 
+* - 2E10 p/s
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+IRRPROFI      57.6E3      2E10
+#else  
+* - 8E8 C/s
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 IRRPROFI      57.6E3       8E8
+#endif
 * Define cooling times
 *          beam-off       2min      5min     10min     30min     60min
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
@@ -98,6 +114,10 @@ RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 6.0
 RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 6.0
 RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 6.0
 *
+#elif Brasscolli
+RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 6.5
+RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 6.5
+*
 #else  
 RPP COLLIP     $hgap 10.0 -5.0 5.0 0.0 10.0
 RPP COLLIN     -10.0 -$hgap -5.0 5.0 0.0 10.0
@@ -125,9 +145,21 @@ ASSIGNMA      COPPER    COLLIN                                  VACUUM
 #elif Nicolli 
 ASSIGNMA      NICKEL    COLLIP
 ASSIGNMA      NICKEL    COLLIN                                  VACUUM
+#elif Brasscolli
+ASSIGNMA       BRASS    COLLIP
+ASSIGNMA       BRASS    COLLIN                                  VACUUM
 #else  
 ASSIGNMA      VACUUM    COLLIP    COLLIN
 #endif  
+*
+* ----------------------------------COLL MAT----------------------------***
+MATERIAL         30.     65.39     7.133                              ZINC
+* CW508L(OT63) with MAX FRACTIONS
+MATERIAL                            8.52                              BRASS
+COMPOUND       -0.64    COPPER   -0.3535      ZINC   -0.0005  ALUMINUMBRASS
+COMPOUND      -0.001      IRON    -0.003    NICKEL    -0.001      LEADBRASS
+COMPOUND      -0.001       TIN                                        BRASS
+MAT-PROP                            355.     BRASS
 *
 * ***********************  SCORING *************************************
 * Bragg peak
@@ -138,15 +170,19 @@ USRBIN         $hgap       -5.       0.0        1.        1.       70. &
 #elif Cucolli 
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN           13.    ENERGY      -46.       10.        5.       6.0ENDEP
-USRBIN         $hgap       -5.       0.0        1.        1.       60. &
+USRBIN         $hgap       -5.       0.0        1.        1.      120. &
 #elif Nicolli 
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN           13.    ENERGY      -46.       10.        5.       6.0ENDEP
-USRBIN         $hgap       -5.       0.0        1.        1.       60. &
+USRBIN         $hgap       -5.       0.0        1.        1.      120. &
+#elif Brasscolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN           13.    ENERGY      -46.       10.        5.       6.5ENDEP
+USRBIN         $hgap       -5.       0.0        1.        1.      130. &
 #else  
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN           13.    ENERGY      -46.       10.        5.      10.0ENDEP
-USRBIN         $hgap       -5.       0.0        1.        1.      100. &
+USRBIN         $hgap       -5.       0.0        1.        1.      200. &
 #endif  
 *
 * residual activation
@@ -250,6 +286,24 @@ USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD07
 USRBIN         $hgap       -5.       0.0       20.       20.       12. &
 USRBIN            0.  ACTOMASS      -49.       10.        5.       6.0ACTMPD08
 USRBIN         $hgap       -5.       0.0       20.       20.       12. &
+#elif Brasscolli
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD01
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD02
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD03
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD04
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD05
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD06
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD07
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
+USRBIN            0.  ACTOMASS      -49.       10.        5.       6.5ACTMPD08
+USRBIN         $hgap       -5.       0.0       20.       20.       13. &
 #else  
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 USRBIN            0.  ACTOMASS      -49.       10.        5.      10.0ACTMPD01
