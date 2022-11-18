@@ -1,0 +1,4226 @@
+#!/usr/local/flair_INFN/flair
+# FLUKA Project file
+Version: 2
+Title: b'b""'
+Input: XPRcolli.inp
+Submit: *Default
+Tabs: 0.1 0.32 0.56 0.81 1.0
+Page: Plot
+DefMain: True
+LinkPrg: lfluka
+F77bound: True
+F77dline: False
+
+# Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   0
+	Pid:      0
+	StartRun: 0
+End
+
+# Geometry Information
+Geometry:
+End
+
+# USRBIN plot "Bragg Peak - P on W"
+Plot: BraggPeak_P_W
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10263391428907198
+	lw.0: 0
+	max: 7.41982716E-04
+	min: 1.93711276E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - P on W
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - P on Cu"
+Plot: BraggPeak_P_Cu
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10505323863185367
+	lw.0: 0
+	max: 4.67533042E-04
+	min: 1.22614290E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - P on Cu
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - P on Ni"
+Plot: BraggPeak_P_Ni
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10632207473008747
+	lw.0: 0
+	max: 5.21794951E-04
+	min: 1.14490933E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - P on Ni
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - P on Brass"
+Plot: BraggPeak_P_Brass
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 0.10508136454973283
+	lw.0: 0
+	max: 4.75763227E-04
+	min: 1.03798175E-06
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - P on Brass
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Bragg Peak - Proton"
+Plot: BraggPeak_P_compare
+	Format: .gnu
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: BraggPeak_P_W.dat
+	file.1: BraggPeak_P_Cu.dat
+	file.2: BraggPeak_P_Ni.dat
+	file.3: BraggPeak_P_Brass.dat
+	grid: 0
+	index: 1
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Bragg Peak - Proton
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Proton on W - t_{cool}=0 s"
+Plot: P_W_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_47.rnc
+	det: 1
+	grid: 0
+	index: 3
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Proton on W - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on W - t_{cool}=0 s"
+Plot: ACTOMASS_P_W_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 144332925.55413815
+	lw.0: 0
+	max: 70820432.0
+	min: 2171.01587
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on W - t_{cool}=0 s"
+Plot: ACTOMASS_P_W_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 144209674.28442383
+	lw.0: 0
+	max: 70871808.0
+	min: 19521.8633
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=0 s"
+Plot: ACTOMASS_P_W_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=2 min"
+Plot: ACTOMASS_P_W_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=2 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=5 min"
+Plot: ACTOMASS_P_W_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=5 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=10 min"
+Plot: ACTOMASS_P_W_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=10 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=30 min"
+Plot: ACTOMASS_P_W_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=30 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=1 h"
+Plot: ACTOMASS_P_W_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=1 d"
+Plot: ACTOMASS_P_W_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on W - t_{cool}=1 w"
+Plot: ACTOMASS_P_W_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on W - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Proton on W"
+Plot: ACTOMASS_P_W_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_P_W_max_T01.dat
+	file.1: ACTOMASS_P_W_max_T02.dat
+	file.2: ACTOMASS_P_W_max_T03.dat
+	file.3: ACTOMASS_P_W_max_T04.dat
+	file.4: ACTOMASS_P_W_max_T05.dat
+	file.5: ACTOMASS_P_W_max_T06.dat
+	file.6: ACTOMASS_P_W_max_T07.dat
+	file.7: ACTOMASS_P_W_max_T08.dat
+	grid: 0
+	index: 3
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Proton on W
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s"
+Plot: AMB74_P_W_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 200858201933.59375
+	lw.0: 0
+	max: 1186045.75
+	min: 780.008850
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s"
+Plot: AMB74_P_W_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 155138949593.75003
+	lw.0: 0
+	max: 1186045.75
+	min: 3824.64600
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Proton on W"
+Plot: AMB74_P_W_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-1:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_P_W_max_T01.dat
+	file.1: AMB74_P_W_max_T02.dat
+	file.2: AMB74_P_W_max_T03.dat
+	file.3: AMB74_P_W_max_T04.dat
+	file.4: AMB74_P_W_max_T05.dat
+	file.5: AMB74_P_W_max_T06.dat
+	file.6: AMB74_P_W_max_T07.dat
+	file.7: AMB74_P_W_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Proton on W
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Proton on Cu - t_{cool}=0 s"
+Plot: P_Cu_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_47.rnc
+	det: 1
+	grid: 0
+	index: 4
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Proton on Cu - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_P_Cu_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 71651653.428237915
+	lw.0: 0
+	max: 22509620.0
+	min: 2108.34375
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_P_Cu_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 71370553.393798828
+	lw.0: 0
+	max: 22517054.0
+	min: 14341.3711
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_P_Cu_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=2 min"
+Plot: ACTOMASS_P_Cu_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=2 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=5 m"
+Plot: ACTOMASS_P_Cu_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=10 m"
+Plot: ACTOMASS_P_Cu_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=30 m"
+Plot: ACTOMASS_P_Cu_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=1 h"
+Plot: ACTOMASS_P_Cu_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=1 d"
+Plot: ACTOMASS_P_Cu_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Proton on Cu - t_{cool}=1 w"
+Plot: ACTOMASS_P_Cu_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Proton on Cu - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Proton on Cu"
+Plot: ACTOMASS_P_Cu_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_P_Cu_max_T01.dat
+	file.1: ACTOMASS_P_Cu_max_T02.dat
+	file.2: ACTOMASS_P_Cu_max_T03.dat
+	file.3: ACTOMASS_P_Cu_max_T04.dat
+	file.4: ACTOMASS_P_Cu_max_T05.dat
+	file.5: ACTOMASS_P_Cu_max_T06.dat
+	file.6: ACTOMASS_P_Cu_max_T07.dat
+	file.7: ACTOMASS_P_Cu_max_T08.dat
+	grid: 0
+	index: 4
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Proton on Cu
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s"
+Plot: AMB74_P_Cu_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 180367466820.31253
+	lw.0: 0
+	max: 1098668.50
+	min: 1049.57190
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s"
+Plot: AMB74_P_Cu_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 148543630000.00003
+	lw.0: 0
+	max: 1098668.50
+	min: 4827.56592
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Proton on Cu"
+Plot: AMB74_P_Cu_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-1:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_P_Cu_max_T01.dat
+	file.1: AMB74_P_Cu_max_T02.dat
+	file.2: AMB74_P_Cu_max_T03.dat
+	file.3: AMB74_P_Cu_max_T04.dat
+	file.4: AMB74_P_Cu_max_T05.dat
+	file.5: AMB74_P_Cu_max_T06.dat
+	file.6: AMB74_P_Cu_max_T07.dat
+	file.7: AMB74_P_Cu_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Proton on Cu
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Proton on Ni - t_{cool}=0 s"
+Plot: P_Ni_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_47.rnc
+	det: 1
+	grid: 0
+	index: 5
+	lw.0: 0
+	plot: A/Z
+	proj: Z
+	ps.0: 0
+	title: Residual activity [Bq] - Proton on Ni - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_P_Ni_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 38275474.570480347
+	lw.0: 0
+	max: 11689465.0
+	min: 1063.42737
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_P_Ni_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 38104845.497802734
+	lw.0: 0
+	max: 11701460.0
+	min: 8198.08008
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_P_Ni_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=2 m"
+Plot: ACTOMASS_P_Ni_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=2 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=5 m"
+Plot: ACTOMASS_P_Ni_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=10 m"
+Plot: ACTOMASS_P_Ni_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=30 m"
+Plot: ACTOMASS_P_Ni_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 h"
+Plot: ACTOMASS_P_Ni_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 d"
+Plot: ACTOMASS_P_Ni_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 w"
+Plot: ACTOMASS_P_Ni_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Ni - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Proton on Ni"
+Plot: ACTOMASS_P_Ni_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_P_Ni_max_T01.dat
+	file.1: ACTOMASS_P_Ni_max_T02.dat
+	file.2: ACTOMASS_P_Ni_max_T03.dat
+	file.3: ACTOMASS_P_Ni_max_T04.dat
+	file.4: ACTOMASS_P_Ni_max_T05.dat
+	file.5: ACTOMASS_P_Ni_max_T06.dat
+	file.6: ACTOMASS_P_Ni_max_T07.dat
+	file.7: ACTOMASS_P_Ni_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Proton on Ni
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s"
+Plot: AMB74_P_Ni_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 149215168460.93747
+	lw.0: 0
+	max: 907744.438
+	min: 836.393066
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s"
+Plot: AMB74_P_Ni_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 117844751624.99997
+	lw.0: 0
+	max: 907744.438
+	min: 2782.83105
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Proton on Ni"
+Plot: AMB74_P_Ni_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-1:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_P_Ni_max_T01.dat
+	file.1: AMB74_P_Ni_max_T02.dat
+	file.2: AMB74_P_Ni_max_T03.dat
+	file.3: AMB74_P_Ni_max_T04.dat
+	file.4: AMB74_P_Ni_max_T05.dat
+	file.5: AMB74_P_Ni_max_T06.dat
+	file.6: AMB74_P_Ni_max_T07.dat
+	file.7: AMB74_P_Ni_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Proton on Ni
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Proton on Brass - t_{cool}=0 s"
+Plot: P_Brass_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_47.rnc
+	det: 1
+	grid: 0
+	index: 6
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Proton on Brass - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_P_Brass_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 81317276.070129395
+	lw.0: 0
+	max: 21202298.0
+	min: 2483.43140
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_P_Brass_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 80960274.867187500
+	lw.0: 0
+	max: 21204536.0
+	min: 12792.5342
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_P_Brass_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=2 m"
+Plot: ACTOMASS_P_Brass_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=2 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=5 m"
+Plot: ACTOMASS_P_Brass_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=10 m"
+Plot: ACTOMASS_P_Brass_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=30 m"
+Plot: ACTOMASS_P_Brass_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 h"
+Plot: ACTOMASS_P_Brass_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 d"
+Plot: ACTOMASS_P_Brass_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 w"
+Plot: ACTOMASS_P_Brass_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Proton on Brass - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Proton on Brass"
+Plot: ACTOMASS_P_Brass_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_P_Brass_max_T01.dat
+	file.1: ACTOMASS_P_Brass_max_T02.dat
+	file.2: ACTOMASS_P_Brass_max_T03.dat
+	file.3: ACTOMASS_P_Brass_max_T04.dat
+	file.4: ACTOMASS_P_Brass_max_T05.dat
+	file.5: ACTOMASS_P_Brass_max_T06.dat
+	file.6: ACTOMASS_P_Brass_max_T07.dat
+	file.7: ACTOMASS_P_Brass_max_T08.dat
+	grid: 0
+	index: 6
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Proton on Brass
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s"
+Plot: AMB74_P_Brass_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 195440840812.50000
+	lw.0: 0
+	max: 1195972.75
+	min: 1200.54175
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s"
+Plot: AMB74_P_Brass_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 160436668062.50000
+	lw.0: 0
+	max: 1195972.75
+	min: 4943.75537
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Proton on Brass"
+Plot: AMB74_P_Brass_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-1:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_P_Brass_max_T01.dat
+	file.1: AMB74_P_Brass_max_T02.dat
+	file.2: AMB74_P_Brass_max_T03.dat
+	file.3: AMB74_P_Brass_max_T04.dat
+	file.4: AMB74_P_Brass_max_T05.dat
+	file.5: AMB74_P_Brass_max_T06.dat
+	file.6: AMB74_P_Brass_max_T07.dat
+	file.7: AMB74_P_Brass_max_T08.dat
+	grid: 0
+	index: 6
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Proton on Brass
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "Neutron Fluence Spectra in Jaw"
+Plot: P_NeuFluence_spectra
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: ../data_2022-11-11/P_W/P_W_50_tab.lis
+	file.1: ../data_2022-11-11/P_Cu/p_Cu_50_tab.lis
+	file.2: ../data_2022-11-11/P_Ni/P_Ni_50_tab.lis
+	file.3: ../data_2022-11-11/P_brass/P_brass_50_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Neutron Fluence Spectra in Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "BEAMPART Fluence Spectra exiting the neg Jaw"
+Plot: P_BEAMPART_fluence_spectra_outgoing_pJaw
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: ../data_2022-11-11/P_W/P_W_52_tab.lis
+	file.1: ../data_2022-11-11/P_Cu/p_Cu_52_tab.lis
+	file.2: ../data_2022-11-11/P_Ni/P_Ni_52_tab.lis
+	file.3: ../data_2022-11-11/P_brass/P_brass_52_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: BEAMPART Fluence Spectra exiting the neg Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "BEAMPART Fluence Spectra exiting the pos Jaw"
+Plot: P_BEAMPART_fluence_spectra_outgoing_nJaw
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 2
+	det.1: 2
+	det.2: 2
+	det.3: 2
+	file.0: ../data_2022-11-11/P_W/P_W_52_tab.lis
+	file.1: ../data_2022-11-11/P_Cu/p_Cu_52_tab.lis
+	file.2: ../data_2022-11-11/P_Ni/P_Ni_52_tab.lis
+	file.3: ../data_2022-11-11/P_brass/P_brass_52_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: BEAMPART Fluence Spectra exiting the pos Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - P on W"
+Plot: BEAMPART_maxFluence_P_W
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_W/P_W_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - P on W
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - P on Cu"
+Plot: BEAMPART_maxFluence_P_Cu
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Cu/p_Cu_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - P on Cu
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - P on Ni"
+Plot: BEAMPART_maxFluence_P_Ni
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_Ni/P_Ni_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - P on Ni
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - P on Brass"
+Plot: BEAMPART_maxFluence_P_Brass
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-11/P_brass/P_brass_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - P on Brass
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max BEAMPART fluence - P"
+Plot: BEAMPART_maxFluence_P_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: BEAMPART_maxFluence_P_W.dat
+	file.1: BEAMPART_maxFluence_P_Cu.dat
+	file.2: BEAMPART_maxFluence_P_Ni.dat
+	file.3: BEAMPART_maxFluence_P_Brass.dat
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Max BEAMPART fluence - P
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
