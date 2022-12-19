@@ -1,7 +1,7 @@
 #!/bin/bash
 
-iFile="../data_2022-11-11/P_brass/P_brass_47_tab.lis"
-oFile="highestPeaks_P_brass.dat"
+iFile="../data_2022-11-18/C_W/C_W_47_tab.lis"
+oFile="highestPeaks_C_W.dat"
 nHighest=5
 
 rm ${oFile}

@@ -1,0 +1,4226 @@
+#!/usr/local/flair_INFN/flair
+# FLUKA Project file
+Version: 2
+Title: b'b\'b\\\'b""\\\'\''
+Input: XPRcolli.inp
+Submit: *Default
+Tabs: 0.1 0.32 0.56 0.81 1.0
+Page: Plot
+DefMain: True
+LinkPrg: lfluka
+F77bound: True
+F77dline: False
+
+# Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   0
+	Pid:      0
+	StartRun: 0
+End
+
+# Geometry Information
+Geometry:
+End
+
+# USRBIN plot "Bragg Peak - C on W"
+Plot: BraggPeak_C_W
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 2.0625568127434235
+	lw.0: 0
+	max: 2.37946268E-02
+	min: 4.64831275E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - C on W
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - C on Cu"
+Plot: BraggPeak_C_Cu
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 1.9809937174431980
+	lw.0: 0
+	max: 1.42731564E-02
+	min: 4.14416718E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - C on Cu
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - C on Ni"
+Plot: BraggPeak_C_Ni
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 2.0033552670793142
+	lw.0: 0
+	max: 1.27713792E-02
+	min: 4.08109627E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - C on Ni
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Bragg Peak - C on Brass"
+Plot: BraggPeak_C_Brass
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_46.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 1
+	int: 1.9865913383546285
+	lw.0: 0
+	max: 1.20451441E-02
+	min: 3.72062728E-04
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Bragg Peak - C on Brass
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Bragg Peak - Carbon"
+Plot: BraggPeak_C_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: BraggPeak_C_W.dat
+	file.1: BraggPeak_C_Cu.dat
+	file.2: BraggPeak_C_Ni.dat
+	file.3: BraggPeak_C_Brass.dat
+	grid: 0
+	index: 1
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Bragg Peak - Carbon
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [GeV/cm^3 per primary]
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Carbon on W - t_{cool}=0 s"
+Plot: C_W_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_47.rnc
+	det: 1
+	grid: 0
+	index: 3
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Carbon on W - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on W - t_{cool}=0 s"
+Plot: ACTOMASS_C_W_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 30721484.437316895
+	lw.0: 0
+	max: 19136126.0
+	min: 1796.59937
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on W - t_{cool}=0 s"
+Plot: ACTOMASS_C_W_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 30603493.036376949
+	lw.0: 0
+	max: 19140442.0
+	min: 12783.0459
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=0 s"
+Plot: ACTOMASS_C_W_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=2 min"
+Plot: ACTOMASS_C_W_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=2 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=5 min"
+Plot: ACTOMASS_C_W_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=5 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=10 min"
+Plot: ACTOMASS_C_W_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=10 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=30 min"
+Plot: ACTOMASS_C_W_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=30 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=1 h"
+Plot: ACTOMASS_C_W_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=1 d"
+Plot: ACTOMASS_C_W_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on W - t_{cool}=1 w"
+Plot: ACTOMASS_C_W_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 3
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on W - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Carbon on W"
+Plot: ACTOMASS_C_W_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_C_W_max_T01.dat
+	file.1: ACTOMASS_C_W_max_T02.dat
+	file.2: ACTOMASS_C_W_max_T03.dat
+	file.3: ACTOMASS_C_W_max_T04.dat
+	file.4: ACTOMASS_C_W_max_T05.dat
+	file.5: ACTOMASS_C_W_max_T06.dat
+	file.6: ACTOMASS_C_W_max_T07.dat
+	file.7: ACTOMASS_C_W_max_T08.dat
+	grid: 0
+	index: 4
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Carbon on W
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on W - t_{cool}=0 s"
+Plot: AMB74_C_W_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 68658501841.796875
+	lw.0: 0
+	max: 399603.781
+	min: 232.162323
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on W - t_{cool}=0 s"
+Plot: AMB74_C_W_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 49268114281.250000
+	lw.0: 0
+	max: 399603.781
+	min: 1213.11548
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on W - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Carbon on W"
+Plot: AMB74_C_W_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-2:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_C_W_max_T01.dat
+	file.1: AMB74_C_W_max_T02.dat
+	file.2: AMB74_C_W_max_T03.dat
+	file.3: AMB74_C_W_max_T04.dat
+	file.4: AMB74_C_W_max_T05.dat
+	file.5: AMB74_C_W_max_T06.dat
+	file.6: AMB74_C_W_max_T07.dat
+	file.7: AMB74_C_W_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Carbon on W
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Carbon on Cu - t_{cool}=0 s"
+Plot: C_Cu_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_47.rnc
+	det: 1
+	grid: 0
+	index: 4
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Carbon on Cu - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_C_Cu_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 19429757.845352173
+	lw.0: 0
+	max: 9630266.00
+	min: 1865.50879
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_C_Cu_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 19203750.917724606
+	lw.0: 0
+	max: 9630385.00
+	min: 8575.99609
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=0 s"
+Plot: ACTOMASS_C_Cu_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=2 min"
+Plot: ACTOMASS_C_Cu_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=2 min
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=5 m"
+Plot: ACTOMASS_C_Cu_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=10 m"
+Plot: ACTOMASS_C_Cu_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=30 m"
+Plot: ACTOMASS_C_Cu_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=1 h"
+Plot: ACTOMASS_C_Cu_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=1 d"
+Plot: ACTOMASS_C_Cu_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max Residual activity - Carbon on Cu - t_{cool}=1 w"
+Plot: ACTOMASS_C_Cu_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 4
+	int: 219646739.78475189
+	lw.0: 0
+	max: 10017092.0
+	min: 1778.91199
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max Residual activity - Carbon on Cu - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Carbon on Cu"
+Plot: ACTOMASS_C_Cu_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_C_Cu_max_T01.dat
+	file.1: ACTOMASS_C_Cu_max_T02.dat
+	file.2: ACTOMASS_C_Cu_max_T03.dat
+	file.3: ACTOMASS_C_Cu_max_T04.dat
+	file.4: ACTOMASS_C_Cu_max_T05.dat
+	file.5: ACTOMASS_C_Cu_max_T06.dat
+	file.6: ACTOMASS_C_Cu_max_T07.dat
+	file.7: ACTOMASS_C_Cu_max_T08.dat
+	grid: 0
+	index: 4
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Carbon on Cu
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Cu - t_{cool}=0 s"
+Plot: AMB74_C_Cu_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 97056774671.875000
+	lw.0: 0
+	max: 571827.562
+	min: 539.792725
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Cu - t_{cool}=0 s"
+Plot: AMB74_C_Cu_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 70118603156.250000
+	lw.0: 0
+	max: 571827.562
+	min: 1811.89514
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Cu - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Carbon on Cu"
+Plot: AMB74_C_Cu_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-2:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_C_Cu_max_T01.dat
+	file.1: AMB74_C_Cu_max_T02.dat
+	file.2: AMB74_C_Cu_max_T03.dat
+	file.3: AMB74_C_Cu_max_T04.dat
+	file.4: AMB74_C_Cu_max_T05.dat
+	file.5: AMB74_C_Cu_max_T06.dat
+	file.6: AMB74_C_Cu_max_T07.dat
+	file.7: AMB74_C_Cu_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Carbon on Cu
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Carbon on Ni - t_{cool}=0 s"
+Plot: C_Ni_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_47.rnc
+	det: 1
+	grid: 0
+	index: 5
+	lw.0: 0
+	plot: A/Z
+	proj: Z
+	ps.0: 0
+	title: Residual activity [Bq] - Carbon on Ni - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_C_Ni_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 13731383.242813112
+	lw.0: 0
+	max: 6984564.50
+	min: 881.745239
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_C_Ni_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 13618166.959228516
+	lw.0: 0
+	max: 6987823.50
+	min: 5250.67090
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s"
+Plot: ACTOMASS_C_Ni_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=2 m"
+Plot: ACTOMASS_C_Ni_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=2 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=5 m"
+Plot: ACTOMASS_C_Ni_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=10 m"
+Plot: ACTOMASS_C_Ni_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=30 m"
+Plot: ACTOMASS_C_Ni_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 h"
+Plot: ACTOMASS_C_Ni_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 d"
+Plot: ACTOMASS_C_Ni_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 w"
+Plot: ACTOMASS_C_Ni_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 5
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Ni - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Carbon on Ni"
+Plot: ACTOMASS_C_Ni_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_C_Ni_max_T01.dat
+	file.1: ACTOMASS_C_Ni_max_T02.dat
+	file.2: ACTOMASS_C_Ni_max_T03.dat
+	file.3: ACTOMASS_C_Ni_max_T04.dat
+	file.4: ACTOMASS_C_Ni_max_T05.dat
+	file.5: ACTOMASS_C_Ni_max_T06.dat
+	file.6: ACTOMASS_C_Ni_max_T07.dat
+	file.7: ACTOMASS_C_Ni_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Carbon on Ni
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Ni - t_{cool}=0 s"
+Plot: AMB74_C_Ni_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 83094129062.500015
+	lw.0: 0
+	max: 484667.969
+	min: 400.233826
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Ni - t_{cool}=0 s"
+Plot: AMB74_C_Ni_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 57375299296.875015
+	lw.0: 0
+	max: 484667.969
+	min: 1247.97729
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Ni - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Carbon on Ni"
+Plot: AMB74_C_Ni_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-2:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_C_Ni_max_T01.dat
+	file.1: AMB74_C_Ni_max_T02.dat
+	file.2: AMB74_C_Ni_max_T03.dat
+	file.3: AMB74_C_Ni_max_T04.dat
+	file.4: AMB74_C_Ni_max_T05.dat
+	file.5: AMB74_C_Ni_max_T06.dat
+	file.6: AMB74_C_Ni_max_T07.dat
+	file.7: AMB74_C_Ni_max_T08.dat
+	grid: 0
+	index: 5
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Carbon on Ni
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# RESNUCLE plot "Residual activity [Bq] - Carbon on Brass - t_{cool}=0 s"
+Plot: C_Brass_T01
+	Format: .png
+	Type:   RESNUCLE
+	cbcolors: 0
+	cblog: True
+	cbmax: 5E8
+	cbmin: 2E-11
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_47.rnc
+	det: 1
+	grid: 0
+	index: 6
+	lw.0: 0
+	plot: A/Z
+	ps.0: 0
+	title: Residual activity [Bq] - Carbon on Brass - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: A []
+	xlog: False
+	xmax: 220
+	y2log: False
+	y2tics: 0
+	ylabel: Z []
+	ylog: False
+	ymax: 90
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_C_Brass_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 21058671.350738525
+	lw.0: 0
+	max: 7308456.50
+	min: 2040.07141
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_C_Brass_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1E8
+	cbmin: 1E3
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 20812235.486328125
+	lw.0: 0
+	max: 7309802.50
+	min: 8513.16699
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s"
+Plot: ACTOMASS_C_Brass_max_T01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=0 s
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=2 m"
+Plot: ACTOMASS_C_Brass_max_T02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 2
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=2 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=5 m"
+Plot: ACTOMASS_C_Brass_max_T03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 3
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=5 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=10 m"
+Plot: ACTOMASS_C_Brass_max_T04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 4
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=10 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=30 m"
+Plot: ACTOMASS_C_Brass_max_T05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 5
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=30 m
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 h"
+Plot: ACTOMASS_C_Brass_max_T06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 6
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 h
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 d"
+Plot: ACTOMASS_C_Brass_max_T07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 7
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 d
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 w"
+Plot: ACTOMASS_C_Brass_max_T08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_49.bnn
+	det: 8
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 6
+	int: 64368349.247661553
+	lw.0: 0
+	max: 1692007.00
+	min: 1272.59656
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Residual activity [Bq/g] - Carbon on Brass - t_{cool}=1 w
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max ACTOMASS - Carbon on Brass"
+Plot: ACTOMASS_C_Brass_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set key left bottom
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: ACTOMASS_C_Brass_max_T01.dat
+	file.1: ACTOMASS_C_Brass_max_T02.dat
+	file.2: ACTOMASS_C_Brass_max_T03.dat
+	file.3: ACTOMASS_C_Brass_max_T04.dat
+	file.4: ACTOMASS_C_Brass_max_T05.dat
+	file.5: ACTOMASS_C_Brass_max_T06.dat
+	file.6: ACTOMASS_C_Brass_max_T07.dat
+	file.7: ACTOMASS_C_Brass_max_T08.dat
+	grid: 0
+	index: 6
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max ACTOMASS - Carbon on Brass
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [Bq/g]
+	ylog: True
+	ymax: 1E8
+	ymin: 1E2
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Brass - t_{cool}=0 s"
+Plot: AMB74_C_Brass_map_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 20
+	bymin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 98591656242.187515
+	lw.0: 0
+	max: 582294.500
+	min: 582.921997
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Carbon on Brass - t_{cool}=0 s"
+Plot: AMB74_C_Brass_map_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 20
+	bxmin: -20.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E2*3600/1E6:2E6*3600/1E6]
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_48.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 71199357218.750015
+	lw.0: 0
+	max: 582294.500
+	min: 1833.84521
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Carbon on Brass - t_{cool}=0 s
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max AMB74 - Carbon on Brass"
+Plot: AMB74_C_Brass_max_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	block.4: 0
+	block.5: 0
+	block.6: 0
+	block.7: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set grid
+set format y "10^{%L}"
+set yrange [1E-2:1E4]
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	det.4: 0
+	det.5: 0
+	det.6: 0
+	det.7: 0
+	file.0: AMB74_C_Brass_max_T01.dat
+	file.1: AMB74_C_Brass_max_T02.dat
+	file.2: AMB74_C_Brass_max_T03.dat
+	file.3: AMB74_C_Brass_max_T04.dat
+	file.4: AMB74_C_Brass_max_T05.dat
+	file.5: AMB74_C_Brass_max_T06.dat
+	file.6: AMB74_C_Brass_max_T07.dat
+	file.7: AMB74_C_Brass_max_T08.dat
+	grid: 0
+	index: 6
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	key.4: 1
+	key.5: 1
+	key.6: 1
+	key.7: 1
+	lc.0: dark-red
+	lc.1: red
+	lc.2: magenta
+	lc.3: dark-blue
+	lc.4: blue
+	lc.5: light-blue
+	lc.6: dark-green
+	lc.7: green
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	lw.4: 1
+	lw.5: 1
+	lw.6: 1
+	lw.7: 1
+	name.0: t_{cool}=0 s
+	name.1: t_{cool}=2 min
+	name.2: t_{cool}=5 min
+	name.3: t_{cool}=10 min
+	name.4: t_{cool}=30 min
+	name.5: t_{cool}=1 h
+	name.6: t_{cool}=1 d
+	name.7: t_{cool}=1 w
+	ndetectors: 8
+	norm.0: 3600/1E6
+	norm.1: 3600/1E6
+	norm.2: 3600/1E6
+	norm.3: 3600/1E6
+	norm.4: 3600/1E6
+	norm.5: 3600/1E6
+	norm.6: 3600/1E6
+	norm.7: 3600/1E6
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	ps.4: 1
+	ps.5: 1
+	ps.6: 1
+	ps.7: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	pt.4: 0
+	pt.5: 0
+	pt.6: 0
+	pt.7: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	show.4: 1
+	show.5: 1
+	show.6: 1
+	show.7: 1
+	title: Max AMB74 - Carbon on Brass
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	with.4: histerror
+	with.5: histerror
+	with.6: histerror
+	with.7: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y.4: 0
+	y.5: 0
+	y.6: 0
+	y.7: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [{/Symbol m}Sv/h]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "Neutron Fluence Spectra in Jaw"
+Plot: C_NeuFluence_spectra
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: ../data_2022-11-18/C_W/C_W_50_tab.lis
+	file.1: ../data_2022-11-18/C_Cu/C_Cu_50_tab.lis
+	file.2: ../data_2022-11-18/C_Ni/C_Ni_50_tab.lis
+	file.3: ../data_2022-11-18/C_brass/C_brass_50_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Neutron Fluence Spectra in Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "BEAMPART Fluence Spectra exiting the neg Jaw"
+Plot: C_BEAMPART_fluence_spectra_outgoing_pJaw
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: ../data_2022-11-18/C_W/C_W_52_tab.lis
+	file.1: ../data_2022-11-18/C_Cu/C_Cu_52_tab.lis
+	file.2: ../data_2022-11-18/C_Ni/C_Ni_52_tab.lis
+	file.3: ../data_2022-11-18/C_brass/C_brass_52_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: BEAMPART Fluence Spectra exiting the neg Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USR-1D plot "BEAMPART Fluence Spectra exiting the pos Jaw"
+Plot: C_BEAMPART_fluence_spectra_outgoing_nJaw
+	Format: .eps
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	commands:
+set format xy "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 2
+	det.1: 2
+	det.2: 2
+	det.3: 2
+	file.0: ../data_2022-11-18/C_W/C_W_52_tab.lis
+	file.1: ../data_2022-11-18/C_Cu/C_Cu_52_tab.lis
+	file.2: ../data_2022-11-18/C_Ni/C_Ni_52_tab.lis
+	file.3: ../data_2022-11-18/C_brass/C_brass_52_tab.lis
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: BEAMPART Fluence Spectra exiting the pos Jaw
+	with.0: histogram
+	with.1: histogram
+	with.2: histogram
+	with.3: histogram
+	x2log: False
+	x2tics: 0
+	xlabel: E [GeV]
+	xlog: True
+	y.0: 1
+	y.1: 1
+	y.2: 1
+	y.3: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - C on W"
+Plot: BEAMPART_maxFluence_C_W
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_W/C_W_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - C on W
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - C on Cu"
+Plot: BEAMPART_maxFluence_C_Cu
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Cu/C_Cu_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - C on Cu
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - C on Ni"
+Plot: BEAMPART_maxFluence_C_Ni
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_Ni/C_Ni_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - C on Ni
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Max BEAMPART fluence - C on Brass"
+Plot: BEAMPART_maxFluence_C_Brass
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	datafile: ../data_2022-11-18/C_brass/C_brass_51.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Max
+	index: 0
+	lw.0: 0
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Max BEAMPART fluence - C on Brass
+	with.0: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USR-1D plot "Max BEAMPART fluence - C"
+Plot: BEAMPART_maxFluence_C_compare
+	Format: .png
+	Type:   USR-1D
+	block.0: 0
+	block.1: 0
+	block.2: 0
+	block.3: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format y "10^{%L}"
+set grid
+	cpd: 0
+	det.0: 0
+	det.1: 0
+	det.2: 0
+	det.3: 0
+	file.0: BEAMPART_maxFluence_C_W.dat
+	file.1: BEAMPART_maxFluence_C_Cu.dat
+	file.2: BEAMPART_maxFluence_C_Ni.dat
+	file.3: BEAMPART_maxFluence_C_Brass.dat
+	grid: 0
+	index: 0
+	key.0: 1
+	key.1: 1
+	key.2: 1
+	key.3: 1
+	lc.0: blue
+	lc.1: red
+	lc.2: magenta
+	lc.3: cyan
+	lw.0: 1
+	lw.1: 1
+	lw.2: 1
+	lw.3: 1
+	name.0: W
+	name.1: Cu
+	name.2: Ni
+	name.3: Brass
+	ndetectors: 4
+	ps.0: 1
+	ps.1: 1
+	ps.2: 1
+	ps.3: 1
+	pt.0: 0
+	pt.1: 0
+	pt.2: 0
+	pt.3: 0
+	show.0: 1
+	show.1: 1
+	show.2: 1
+	show.3: 1
+	title: Max BEAMPART fluence - C
+	with.0: histerror
+	with.1: histerror
+	with.2: histerror
+	with.3: histerror
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	y.0: 0
+	y.1: 0
+	y.2: 0
+	y.3: 0
+	y2log: False
+	y2tics: 0
+	ylabel: [cm^{-2} per primary]
+	ylog: True
+	zlog: False
+	ztics: 0
+End

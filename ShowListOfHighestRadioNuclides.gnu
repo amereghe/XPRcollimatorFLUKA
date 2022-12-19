@@ -7,7 +7,7 @@ iFileName="highestPeaks_P_W.dat"
 # set title "Ni"
 # iFileName="highestPeaks_P_Ni.dat"
 # set title "Brass"
-# iFileName="highestPeaks_P_brass.dat"
+# iFileName="highestPeaks_C_brass.dat"
 nSeries=8.0+1
 set style fill solid noborder
 set boxwidth 1/nSeries
@@ -15,8 +15,8 @@ set logscale y
 set format y "10^{%L}"
 set grid
 set ylabel "[Bq]"
-LabelMe(x)=(x==75)?"Re":(x==74)?"W":(x==73)?"Ta":(x==72)?"Hf":(x==71)?"Lu":(x==30)?"Zn":(x==29)?"Cu":(x==28)?"Ni":(x==27)?"Co":(x==26)?"Fe":(x==25)?"Mn":(x==24)?"Cr":x
-set yrange [1E5:1E9]
+LabelMe(x)=(x==75)?"Re":(x==74)?"W":(x==73)?"Ta":(x==72)?"Hf":(x==71)?"Lu":(x==31)?"Ga":(x==30)?"Zn":(x==29)?"Cu":(x==28)?"Ni":(x==27)?"Co":(x==26)?"Fe":(x==25)?"Mn":(x==24)?"Cr":(x==23)?"V":(x==6)?"C":(x==4)?"Be":x
+set yrange [1E4:1E9]
 
 plot \
      iFileName index 0 using (column(0)+1-3.5/nSeries):3 with boxes lc rgb "red" title "t_{cool}=0 s",\
