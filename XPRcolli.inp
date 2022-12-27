@@ -348,6 +348,60 @@ USRBDX         100.0   1.0E-04     160.0                               &
 USRBDX           99.  BEAMPART      -52.    COLLIN   AIRAROL          BPfluN
 USRBDX         100.0   1.0E-04     160.0                               &
 *
+* residual dose at fingers (no AUXSCORE card: AMB64 default)
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+DCYSCORE         1.0                      DSDT-D01                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D01
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         2.0                      DSDT-D02                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D02
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         3.0                      DSDT-D03                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D03
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         4.0                      DSDT-D04                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D04
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         5.0                      DSDT-D05                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D05
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         6.0                      DSDT-D06                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D06
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         7.0                      DSDT-D07                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D07
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         8.0                      DSDT-D08                    USRBIN
+USRBIN           10.   DOSE-EQ      -53.      11.0       6.0      11.0DSDT-D08
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+* only electrons/positrons
+DCYSCORE         1.0                      DSDE-D01                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D01
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         2.0                      DSDE-D02                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D02
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         3.0                      DSDE-D03                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D03
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         4.0                      DSDE-D04                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D04
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         5.0                      DSDE-D05                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D05
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         6.0                      DSDE-D06                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D06
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         7.0                      DSDE-D07                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D07
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+DCYSCORE         8.0                      DSDE-D08                    USRBIN
+USRBIN           10.   DOSE-EQ      -54.      11.0       6.0      11.0DSDE-D08
+USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
+AUXSCORE      USRBIN     E+&E-            DSDE-D01  DSDE-D08          AMB74
+*
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 RANDOMIZ                    1.
 START         10000.
