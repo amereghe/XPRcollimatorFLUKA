@@ -1,7 +1,7 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b'b""'
+Title: b'b\'b""\''
 Input: XPRcolli.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -794,7 +794,7 @@ Plot: ACTOMASS_P_W_max_compare
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
-	cbtics: 0
+	cbtics: 1
 	commands:
 set grid
 set format y "10^{%L}"
@@ -850,7 +850,7 @@ set key left bottom
 	name.5: t_{cool}=1 h
 	name.6: t_{cool}=1 d
 	name.7: t_{cool}=1 w
-	ndetectors: 4
+	ndetectors: 8
 	ps.0: 1
 	ps.1: 1
 	ps.2: 1
@@ -1803,7 +1803,7 @@ set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	max: 1098668.50
 	min: 1049.57190
 	norm: 3600/1E6
-	proj: Y
+	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
