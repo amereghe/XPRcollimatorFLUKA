@@ -35,7 +35,7 @@ Plot: BraggPeak_P_W
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_46.bnn
+	datafile: ../P_W/XPRcolli_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -78,7 +78,7 @@ Plot: BraggPeak_P_Cu
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_46.bnn
+	datafile: ../P_Cu/XPRcolli_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -121,7 +121,7 @@ Plot: BraggPeak_P_Ni
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_46.bnn
+	datafile: ../P_Ni/XPRcolli_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -164,7 +164,7 @@ Plot: BraggPeak_P_Brass
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_46.bnn
+	datafile: ../P_brass/XPRcolli_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -287,7 +287,7 @@ Plot: P_W_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_47.rnc
+	datafile: ../P_W/XPRcolli_47.rnc
 	det: 1
 	grid: 0
 	index: 3
@@ -328,7 +328,7 @@ Plot: ACTOMASS_P_W_map_hor_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -378,7 +378,7 @@ Plot: ACTOMASS_P_W_map_ver_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -424,7 +424,7 @@ Plot: ACTOMASS_P_W_max_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -470,7 +470,7 @@ Plot: ACTOMASS_P_W_max_T02
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 2
 	errors: 0
 	geo: -No-
@@ -516,7 +516,7 @@ Plot: ACTOMASS_P_W_max_T03
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 3
 	errors: 0
 	geo: -No-
@@ -562,7 +562,7 @@ Plot: ACTOMASS_P_W_max_T04
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 4
 	errors: 0
 	geo: -No-
@@ -608,7 +608,7 @@ Plot: ACTOMASS_P_W_max_T05
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 5
 	errors: 0
 	geo: -No-
@@ -654,7 +654,7 @@ Plot: ACTOMASS_P_W_max_T06
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 6
 	errors: 0
 	geo: -No-
@@ -700,7 +700,7 @@ Plot: ACTOMASS_P_W_max_T07
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 7
 	errors: 0
 	geo: -No-
@@ -746,7 +746,7 @@ Plot: ACTOMASS_P_W_max_T08
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_49.bnn
+	datafile: ../P_W/XPRcolli_49.bnn
 	det: 8
 	errors: 0
 	geo: -No-
@@ -923,7 +923,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_48.bnn
+	datafile: ../P_W/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -973,7 +973,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_48.bnn
+	datafile: ../P_W/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -1155,7 +1155,7 @@ Plot: P_Cu_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_47.rnc
+	datafile: ../P_Cu/XPRcolli_47.rnc
 	det: 1
 	grid: 0
 	index: 4
@@ -1196,7 +1196,7 @@ Plot: ACTOMASS_P_Cu_map_hor_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -1246,7 +1246,7 @@ Plot: ACTOMASS_P_Cu_map_ver_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -1292,7 +1292,7 @@ Plot: ACTOMASS_P_Cu_max_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -1338,7 +1338,7 @@ Plot: ACTOMASS_P_Cu_max_T02
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 2
 	errors: 0
 	geo: -No-
@@ -1384,7 +1384,7 @@ Plot: ACTOMASS_P_Cu_max_T03
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 3
 	errors: 0
 	geo: -No-
@@ -1430,7 +1430,7 @@ Plot: ACTOMASS_P_Cu_max_T04
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 4
 	errors: 0
 	geo: -No-
@@ -1476,7 +1476,7 @@ Plot: ACTOMASS_P_Cu_max_T05
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 5
 	errors: 0
 	geo: -No-
@@ -1522,7 +1522,7 @@ Plot: ACTOMASS_P_Cu_max_T06
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 6
 	errors: 0
 	geo: -No-
@@ -1568,7 +1568,7 @@ Plot: ACTOMASS_P_Cu_max_T07
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 7
 	errors: 0
 	geo: -No-
@@ -1614,7 +1614,7 @@ Plot: ACTOMASS_P_Cu_max_T08
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_49.bnn
+	datafile: ../P_Cu/XPRcolli_49.bnn
 	det: 8
 	errors: 0
 	geo: -No-
@@ -1791,7 +1791,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_48.bnn
+	datafile: ../P_Cu/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -1841,7 +1841,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_48.bnn
+	datafile: ../P_Cu/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2023,7 +2023,7 @@ Plot: P_Ni_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_47.rnc
+	datafile: ../P_Ni/XPRcolli_47.rnc
 	det: 1
 	grid: 0
 	index: 5
@@ -2065,7 +2065,7 @@ Plot: ACTOMASS_P_Ni_map_hor_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2115,7 +2115,7 @@ Plot: ACTOMASS_P_Ni_map_ver_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2161,7 +2161,7 @@ Plot: ACTOMASS_P_Ni_max_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2207,7 +2207,7 @@ Plot: ACTOMASS_P_Ni_max_T02
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 2
 	errors: 0
 	geo: -No-
@@ -2253,7 +2253,7 @@ Plot: ACTOMASS_P_Ni_max_T03
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 3
 	errors: 0
 	geo: -No-
@@ -2299,7 +2299,7 @@ Plot: ACTOMASS_P_Ni_max_T04
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 4
 	errors: 0
 	geo: -No-
@@ -2345,7 +2345,7 @@ Plot: ACTOMASS_P_Ni_max_T05
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 5
 	errors: 0
 	geo: -No-
@@ -2391,7 +2391,7 @@ Plot: ACTOMASS_P_Ni_max_T06
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 6
 	errors: 0
 	geo: -No-
@@ -2437,7 +2437,7 @@ Plot: ACTOMASS_P_Ni_max_T07
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 7
 	errors: 0
 	geo: -No-
@@ -2483,7 +2483,7 @@ Plot: ACTOMASS_P_Ni_max_T08
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_49.bnn
+	datafile: ../P_Ni/XPRcolli_49.bnn
 	det: 8
 	errors: 0
 	geo: -No-
@@ -2660,7 +2660,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_48.bnn
+	datafile: ../P_Ni/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2710,7 +2710,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_48.bnn
+	datafile: ../P_Ni/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2892,7 +2892,7 @@ Plot: P_Brass_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_47.rnc
+	datafile: ../P_brass/XPRcolli_47.rnc
 	det: 1
 	grid: 0
 	index: 6
@@ -2933,7 +2933,7 @@ Plot: ACTOMASS_P_Brass_map_hor_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2983,7 +2983,7 @@ Plot: ACTOMASS_P_Brass_map_ver_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3029,7 +3029,7 @@ Plot: ACTOMASS_P_Brass_max_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3075,7 +3075,7 @@ Plot: ACTOMASS_P_Brass_max_T02
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 2
 	errors: 0
 	geo: -No-
@@ -3121,7 +3121,7 @@ Plot: ACTOMASS_P_Brass_max_T03
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 3
 	errors: 0
 	geo: -No-
@@ -3167,7 +3167,7 @@ Plot: ACTOMASS_P_Brass_max_T04
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 4
 	errors: 0
 	geo: -No-
@@ -3213,7 +3213,7 @@ Plot: ACTOMASS_P_Brass_max_T05
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 5
 	errors: 0
 	geo: -No-
@@ -3259,7 +3259,7 @@ Plot: ACTOMASS_P_Brass_max_T06
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 6
 	errors: 0
 	geo: -No-
@@ -3305,7 +3305,7 @@ Plot: ACTOMASS_P_Brass_max_T07
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 7
 	errors: 0
 	geo: -No-
@@ -3351,7 +3351,7 @@ Plot: ACTOMASS_P_Brass_max_T08
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_49.bnn
+	datafile: ../P_brass/XPRcolli_49.bnn
 	det: 8
 	errors: 0
 	geo: -No-
@@ -3528,7 +3528,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_48.bnn
+	datafile: ../P_brass/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3578,7 +3578,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_48.bnn
+	datafile: ../P_brass/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3766,10 +3766,10 @@ set grid
 	det.1: 0
 	det.2: 0
 	det.3: 0
-	file.0: ../data_2022-11-11/P_W/P_W_50_tab.lis
-	file.1: ../data_2022-11-11/P_Cu/p_Cu_50_tab.lis
-	file.2: ../data_2022-11-11/P_Ni/P_Ni_50_tab.lis
-	file.3: ../data_2022-11-11/P_brass/P_brass_50_tab.lis
+	file.0: ../P_W/XPRcolli_50_tab.lis
+	file.1: ../P_Cu/XPRcolli_50_tab.lis
+	file.2: ../P_Ni/XPRcolli_50_tab.lis
+	file.3: ../P_brass/XPRcolli_50_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -3843,10 +3843,10 @@ set grid
 	det.1: 0
 	det.2: 0
 	det.3: 0
-	file.0: ../data_2022-11-11/P_W/P_W_52_tab.lis
-	file.1: ../data_2022-11-11/P_Cu/p_Cu_52_tab.lis
-	file.2: ../data_2022-11-11/P_Ni/P_Ni_52_tab.lis
-	file.3: ../data_2022-11-11/P_brass/P_brass_52_tab.lis
+	file.0: ../P_W/XPRcolli_52_tab.lis
+	file.1: ../P_Cu/XPRcolli_52_tab.lis
+	file.2: ../P_Ni/XPRcolli_52_tab.lis
+	file.3: ../P_brass/XPRcolli_52_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -3920,10 +3920,10 @@ set grid
 	det.1: 2
 	det.2: 2
 	det.3: 2
-	file.0: ../data_2022-11-11/P_W/P_W_52_tab.lis
-	file.1: ../data_2022-11-11/P_Cu/p_Cu_52_tab.lis
-	file.2: ../data_2022-11-11/P_Ni/P_Ni_52_tab.lis
-	file.3: ../data_2022-11-11/P_brass/P_brass_52_tab.lis
+	file.0: ../P_W/XPRcolli_52_tab.lis
+	file.1: ../P_Cu/XPRcolli_52_tab.lis
+	file.2: ../P_Ni/XPRcolli_52_tab.lis
+	file.3: ../P_brass/XPRcolli_52_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -3990,7 +3990,7 @@ Plot: BEAMPART_maxFluence_P_W
 set format y "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_W/P_W_51.bnn
+	datafile: ../P_W/XPRcolli_51.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -4033,7 +4033,7 @@ Plot: BEAMPART_maxFluence_P_Cu
 set format y "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Cu/p_Cu_51.bnn
+	datafile: ../P_Cu/XPRcolli_51.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -4076,7 +4076,7 @@ Plot: BEAMPART_maxFluence_P_Ni
 set format y "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_Ni/P_Ni_51.bnn
+	datafile: ../P_Ni/XPRcolli_51.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -4119,7 +4119,7 @@ Plot: BEAMPART_maxFluence_P_Brass
 set format y "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../data_2022-11-11/P_brass/P_brass_51.bnn
+	datafile: ../P_brass/XPRcolli_51.bnn
 	det: 1
 	errors: 0
 	geo: -No-
