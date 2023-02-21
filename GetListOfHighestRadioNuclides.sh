@@ -1,13 +1,14 @@
 #!/bin/bash
 
-iFile="../data_2022-11-18/C_W/C_W_47_tab.lis"
-oFile="highestPeaks_C_W.dat"
+myCase="C_W"
+iFile="../${myCase}/XPRcolli_47_tab.lis"
+oFile="highestPeaks_${myCase}.dat"
 nHighest=5
 
 rm ${oFile}
 
 iStarts=`grep -n Detector ${iFile} | cut -d\: -f1` ; iStarts=( ${iStarts} )
-# debug => for ((ii=0;ii<1;ii++)) ; do
+# debug --> for ((ii=0;ii<1;ii++)) ; do
 for ((ii=0;ii<${#iStarts[@]};ii++)) ; do
     let jj=ii+1
     if [ $jj == ${#iStarts[@]} ] ; then
@@ -23,5 +24,6 @@ for ((ii=0;ii<${#iStarts[@]};ii++)) ; do
     echo "${numbers}" | sort -rg -k3 | head -n ${nHighest} >> ${oFile}
     echo "" >> ${oFile}
     echo "" >> ${oFile}
-    # debug => echo ${iHead} ${iTail}
+    # debug --> echo "${numbers}"
+    # debug --> echo ${iHead} ${iTail}
 done
