@@ -1,7 +1,7 @@
 #!/usr/local/flair_INFN/flair
 # FLUKA Project file
 Version: 2
-Title: b'b\'b""\''
+Title: b'b\'b\\\'b\\\\\\\'b\\\\\\\\\\\\\\\'b""\\\\\\\\\\\\\\\'\\\\\\\'\\\'\''
 Input: XPRcolli.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -42,10 +42,10 @@ Plot: BraggPeak_P_W
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 0.10263391428907198
+	int: 0.10264477274517958
 	lw.0: 0
-	max: 7.41982716E-04
-	min: 1.93711276E-06
+	max: 7.41942786E-04
+	min: 1.92502625E-06
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -85,10 +85,10 @@ Plot: BraggPeak_P_Cu
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 0.10505323863185367
+	int: 0.10507577534895063
 	lw.0: 0
-	max: 4.67533042E-04
-	min: 1.22614290E-06
+	max: 5.08869824E-04
+	min: 1.16571960E-06
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -128,10 +128,10 @@ Plot: BraggPeak_P_Ni
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 0.10632207473008747
+	int: 0.10634288415303672
 	lw.0: 0
-	max: 5.21794951E-04
-	min: 1.14490933E-06
+	max: 5.46251831E-04
+	min: 1.09458301E-06
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -164,17 +164,17 @@ Plot: BraggPeak_P_Brass
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_46.bnn
+	datafile: ../P_Brass/XPRcolli_46.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Projection
 	index: 1
-	int: 0.10508136454973283
+	int: 0.10511279304751042
 	lw.0: 0
-	max: 4.75763227E-04
-	min: 1.03798175E-06
+	max: 4.75913403E-04
+	min: 1.03975469E-06
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -208,7 +208,7 @@ Plot: BraggPeak_P_compare
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
-	cbtics: 0
+	cbtics: 1
 	commands:
 set grid
 	cpd: 0
@@ -335,10 +335,10 @@ set grid
 	grid: 0
 	hist: 2D Projection
 	index: 3
-	int: 144332925.55413815
+	int: 143915412.48846439
 	lw.0: 0
-	max: 70820432.0
-	min: 2171.01587
+	max: 70581312.0
+	min: 2058.48560
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -385,10 +385,10 @@ set grid
 	grid: 0
 	hist: 2D Projection
 	index: 3
-	int: 144209674.28442383
+	int: 143762212.02294922
 	lw.0: 0
-	max: 70871808.0
-	min: 19521.8633
+	max: 70646552.0
+	min: 19926.0664
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -930,10 +930,10 @@ set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	grid: 0
 	hist: 2D Projection
 	index: 3
-	int: 200858201933.59375
+	int: 199918437859.37500
 	lw.0: 0
-	max: 1186045.75
-	min: 780.008850
+	max: 1180219.50
+	min: 756.107910
 	norm: 3600/1E6
 	proj: Y
 	ps.0: 0
@@ -980,10 +980,10 @@ set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	grid: 0
 	hist: 2D Projection
 	index: 3
-	int: 155138949593.75003
+	int: 154405141640.62503
 	lw.0: 0
-	max: 1186045.75
-	min: 3824.64600
+	max: 1180219.50
+	min: 3809.97534
 	norm: 3600/1E6
 	proj: X
 	ps.0: 0
@@ -1140,6 +1140,306 @@ set yrange [1E-1:1E4]
 	ztics: 0
 End
 
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_W_map_fingerAll_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 5406566646.4090567
+	lw.0: 0
+	max: 1.29467763E+09
+	min: 4643.65137
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_W_map_fingerAll_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 3565467798.9433594
+	lw.0: 0
+	max: 1.29793830E+09
+	min: 199999.078
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_W_map_fingerAll_verN_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0
+	bxmin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 2294028164.1718750
+	lw.0: 0
+	max: 535657504.
+	min: 1222473.75
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_W_map_fingerAll_verP_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10.5
+	bxmin: 10.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 15264327.602546692
+	lw.0: 0
+	max: 589313.688
+	min: 918.591492
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_W_map_fingerLep_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 289233355.95500052
+	lw.0: 0
+	max: 146210816.
+	min: 3.44132361E-11
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_W_map_fingerLep_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_W/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 204287369.83686638
+	lw.0: 0
+	max: 147153424.
+	min: 6.45296525E-11
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on W - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
 # RESNUCLE plot "Residual activity [Bq] - Proton on Cu - t_{cool}=0 s"
 Plot: P_Cu_T01
 	Format: .png
@@ -1203,10 +1503,10 @@ set grid
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 71651653.428237915
+	int: 69691220.434844956
 	lw.0: 0
-	max: 22509620.0
-	min: 2108.34375
+	max: 21496596.0
+	min: 2261.47021
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -1253,10 +1553,10 @@ set grid
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 71370553.393798828
+	int: 69405831.188232422
 	lw.0: 0
-	max: 22517054.0
-	min: 14341.3711
+	max: 21514788.0
+	min: 12146.9199
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1798,12 +2098,12 @@ set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 180367466820.31253
+	int: 167564799996.09375
 	lw.0: 0
-	max: 1098668.50
-	min: 1049.57190
+	max: 1020017.88
+	min: 936.995300
 	norm: 3600/1E6
-	proj: X
+	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 0
@@ -1848,10 +2148,10 @@ set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 148543630000.00003
+	int: 137549028781.25000
 	lw.0: 0
-	max: 1098668.50
-	min: 4827.56592
+	max: 1020017.88
+	min: 4477.89893
 	norm: 3600/1E6
 	proj: X
 	ps.0: 0
@@ -2008,6 +2308,306 @@ set yrange [1E-1:1E4]
 	ztics: 0
 End
 
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Cu_map_fingerAll_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 4505106369.2177734
+	lw.0: 0
+	max: 506137088.
+	min: 112156.555
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Cu_map_fingerAll_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 2918136892.7031250
+	lw.0: 0
+	max: 506202464.
+	min: 968435.125
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Cu_map_fingerAll_verN_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0
+	bxmin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 1955356466.6718750
+	lw.0: 0
+	max: 217130336.
+	min: 1720634.88
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Cu_map_fingerAll_verP_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10.5
+	bxmin: 10.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 19597591.979492188
+	lw.0: 0
+	max: 769016.750
+	min: 47889.2695
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Cu_map_fingerLep_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 157033754.70626447
+	lw.0: 0
+	max: 34719348.0
+	min: 1.06151990E-10
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Cu_map_fingerLep_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Cu/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 108636474.16352189
+	lw.0: 0
+	max: 36350736.0
+	min: 8.18275780E-10
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Cu - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
 # RESNUCLE plot "Residual activity [Bq] - Proton on Ni - t_{cool}=0 s"
 Plot: P_Ni_T01
 	Format: .png
@@ -2018,7 +2618,7 @@ Plot: P_Ni_T01
 	cbmin: 2E-11
 	cbpalette: FLUKA
 	cbround: 0
-	cbtics: 0
+	cbtics: 1
 	commands:
 set format cb "10^{%L}"
 set grid
@@ -2877,6 +3477,306 @@ set yrange [1E-1:1E4]
 	ztics: 0
 End
 
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Ni_map_fingerAll_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 4144947993.8081055
+	lw.0: 0
+	max: 565550784.
+	min: 60273.0664
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Ni_map_fingerAll_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 2728930570.0000000
+	lw.0: 0
+	max: 568797824.
+	min: 629659.875
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Ni_map_fingerAll_verN_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0
+	bxmin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 1755447725.0781250
+	lw.0: 0
+	max: 250655664.
+	min: 902171.688
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Ni_map_fingerAll_verP_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10.5
+	bxmin: 10.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 10183213.935302734
+	lw.0: 0
+	max: 382613.312
+	min: 27021.1797
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Ni_map_fingerLep_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 804007951.87465024
+	lw.0: 0
+	max: 142243472.
+	min: 1.37973151E-12
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Ni_map_fingerLep_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Ni/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 550540360.05154860
+	lw.0: 0
+	max: 142954880.
+	min: 1.57569124E-10
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Ni - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
 # RESNUCLE plot "Residual activity [Bq] - Proton on Brass - t_{cool}=0 s"
 Plot: P_Brass_T01
 	Format: .png
@@ -2892,7 +3792,7 @@ Plot: P_Brass_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_47.rnc
+	datafile: ../P_Brass/XPRcolli_47.rnc
 	det: 1
 	grid: 0
 	index: 6
@@ -2933,7 +3833,7 @@ Plot: ACTOMASS_P_Brass_map_hor_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -2983,7 +3883,7 @@ Plot: ACTOMASS_P_Brass_map_ver_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3029,7 +3929,7 @@ Plot: ACTOMASS_P_Brass_max_T01
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3075,7 +3975,7 @@ Plot: ACTOMASS_P_Brass_max_T02
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 2
 	errors: 0
 	geo: -No-
@@ -3121,7 +4021,7 @@ Plot: ACTOMASS_P_Brass_max_T03
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 3
 	errors: 0
 	geo: -No-
@@ -3167,7 +4067,7 @@ Plot: ACTOMASS_P_Brass_max_T04
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 4
 	errors: 0
 	geo: -No-
@@ -3213,7 +4113,7 @@ Plot: ACTOMASS_P_Brass_max_T05
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 5
 	errors: 0
 	geo: -No-
@@ -3259,7 +4159,7 @@ Plot: ACTOMASS_P_Brass_max_T06
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 6
 	errors: 0
 	geo: -No-
@@ -3305,7 +4205,7 @@ Plot: ACTOMASS_P_Brass_max_T07
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 7
 	errors: 0
 	geo: -No-
@@ -3351,7 +4251,7 @@ Plot: ACTOMASS_P_Brass_max_T08
 set format cb "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_49.bnn
+	datafile: ../P_Brass/XPRcolli_49.bnn
 	det: 8
 	errors: 0
 	geo: -No-
@@ -3528,7 +4428,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_48.bnn
+	datafile: ../P_Brass/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3578,7 +4478,7 @@ set format cb "10^{%L}"
 set grid
 set cbrange [2E2*3600/1E6:2E6*3600/1E6]
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_48.bnn
+	datafile: ../P_Brass/XPRcolli_48.bnn
 	det: 1
 	errors: 0
 	geo: -No-
@@ -3745,6 +4645,306 @@ set yrange [1E-1:1E4]
 	ztics: 0
 End
 
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Brass_map_fingerAll_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 4959078815.3486328
+	lw.0: 0
+	max: 536914048.
+	min: 128130.281
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Brass_map_fingerAll_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 3219720397.4062500
+	lw.0: 0
+	max: 536969856.
+	min: 1105532.00
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Brass_map_fingerAll_verN_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0
+	bxmin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 2160950342.7031250
+	lw.0: 0
+	max: 228432048.
+	min: 1787860.62
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers"
+Plot: AMB74_P_Brass_map_fingerAll_verP_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10.5
+	bxmin: 10.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_53.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 18512057.405273438
+	lw.0: 0
+	max: 695840.500
+	min: 58121.1406
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Brass_map_fingerLep_hor_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bymax: 0.5
+	bymin: -0.5
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 233252318.08758041
+	lw.0: 0
+	max: 39395456.0
+	min: 1.00676696E-10
+	norm: 3600/1E6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: x [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers (only leptons)"
+Plot: AMB74_P_Brass_map_fingerLep_ver_T01
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0.5
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set format cb "10^{%L}"
+set grid
+set cbrange [2E1*3600/1E6:2E9*3600/1E6]
+	cpd: 0
+	datafile: ../P_Brass/XPRcolli_54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 160639186.65218496
+	lw.0: 0
+	max: 40176796.0
+	min: 6.17980389E-10
+	norm: 3600/1E6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: AMB74 [{/Symbol m}Sv/h] - Proton on Brass - t_{cool}=0 s - dose to fingers (only leptons)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: z [cm]
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: y [cm]
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
 # USR-1D plot "Neutron Fluence Spectra in Jaw"
 Plot: P_NeuFluence_spectra
 	Format: .png
@@ -3769,7 +4969,7 @@ set grid
 	file.0: ../P_W/XPRcolli_50_tab.lis
 	file.1: ../P_Cu/XPRcolli_50_tab.lis
 	file.2: ../P_Ni/XPRcolli_50_tab.lis
-	file.3: ../P_brass/XPRcolli_50_tab.lis
+	file.3: ../P_Brass/XPRcolli_50_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -3846,7 +5046,7 @@ set grid
 	file.0: ../P_W/XPRcolli_52_tab.lis
 	file.1: ../P_Cu/XPRcolli_52_tab.lis
 	file.2: ../P_Ni/XPRcolli_52_tab.lis
-	file.3: ../P_brass/XPRcolli_52_tab.lis
+	file.3: ../P_Brass/XPRcolli_52_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -3923,7 +5123,7 @@ set grid
 	file.0: ../P_W/XPRcolli_52_tab.lis
 	file.1: ../P_Cu/XPRcolli_52_tab.lis
 	file.2: ../P_Ni/XPRcolli_52_tab.lis
-	file.3: ../P_brass/XPRcolli_52_tab.lis
+	file.3: ../P_Brass/XPRcolli_52_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
@@ -4119,7 +5319,7 @@ Plot: BEAMPART_maxFluence_P_Brass
 set format y "10^{%L}"
 set grid
 	cpd: 0
-	datafile: ../P_brass/XPRcolli_51.bnn
+	datafile: ../P_Brass/XPRcolli_51.bnn
 	det: 1
 	errors: 0
 	geo: -No-
