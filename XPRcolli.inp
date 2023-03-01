@@ -10,18 +10,18 @@ XPR Collimators
 *      #define Brasscolli: brass, 65mm of length;
 *      default: vacuum, 100mm of length;
 #define Wcolli 
-#define Cucolli 
-#define Nicolli
-#define Brasscolli
+* #define Cucolli 
+* #define Nicolli
+* #define Brasscolli
 * - half gap [cm]
 #define hgap 0.0
 * - beam particle
 *      #define pBeam: proton, 230 MeV (H2O range of 320mm);
 *      default: C 400MeV/u (H2O range of 270mm);
-*#define pBeam 
+* #define pBeam 
 * - low energy neutron x-sec
 #define lowpwxs
-#define selfshield
+* #define selfshield
 *
 * physics settings for RP studies
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
@@ -403,6 +403,6 @@ USRBIN          -1.0      -6.0      -1.0      24.0      24.0      24.0 &
 AUXSCORE      USRBIN     E+&E-            DSDE-D01  DSDE-D08          AMB74
 *
 * ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
-RANDOMIZ                    1.
-START         10000.
+RANDOMIZ         1.0       1.0
+START      1500000.0
 STOP

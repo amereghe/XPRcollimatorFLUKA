@@ -1,13 +1,13 @@
 reset
 
 set title "W"
-iFileName="highestPeaks_P_W.dat"
+iFileName="highestPeaks_C_W.dat"
 # set title "Cu"
-# iFileName="highestPeaks_P_Cu.dat"
+# iFileName="highestPeaks_C_Cu.dat"
 # set title "Ni"
-# iFileName="highestPeaks_P_Ni.dat"
+# iFileName="highestPeaks_C_Ni.dat"
 # set title "Brass"
-# iFileName="highestPeaks_C_brass.dat"
+# iFileName="highestPeaks_C_Brass.dat"
 nSeries=8.0+1
 set style fill solid noborder
 set boxwidth 1/nSeries

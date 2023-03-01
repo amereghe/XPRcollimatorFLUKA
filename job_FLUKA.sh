@@ -1,10 +1,10 @@
 #!/bin/bash
 
 inputFile=XPRcolli.inp
-FLUKAexe=/usr/local/FLUKA/INFN/2021.2.8/flukadpm3
-export FLUPRO=/usr/local/FLUKA/INFN/2021.2.8
+export FLUPRO=/usr/local/FLUKA/INFN/2021.2.9
 export FLUKA=${FLUPRO}
 export FLUFOR=gfortran
+FLUKAexe=${FLUPRO}/flukadpm3
 
 # start job
 echo " starting job at `date` in folder $PWD..."
